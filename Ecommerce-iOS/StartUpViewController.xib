@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartUpViewController" customModule="Ecommerce_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="9Of-bp-tEB" id="9lP-MF-h5L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,6 +28,9 @@
                         <constraint firstAttribute="height" constant="58" id="qdc-Xo-fzn"/>
                     </constraints>
                     <state key="normal" title="Button" image="Login_Button"/>
+                    <connections>
+                        <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="Pax-1t-7Ji"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dTM-r3-vAE">
                     <rect key="frame" x="93" y="498" width="110" height="200"/>
