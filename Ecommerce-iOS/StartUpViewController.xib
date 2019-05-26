@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartUpViewController" customModule="Ecommerce_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-bp-tEB">
+                    <rect key="frame" x="83" y="488" width="248" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="248" id="gad-4C-Iuy"/>
+                        <constraint firstAttribute="height" constant="58" id="qdc-Xo-fzn"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="Login_Button"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dTM-r3-vAE">
+                    <rect key="frame" x="93" y="498" width="110" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-dQ-tVG">
+                    <rect key="frame" x="83" y="566" width="248" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="kpT-T5-aq0"/>
+                        <constraint firstAttribute="width" constant="248" id="rzI-t6-ofh"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="Sign_Up_Button"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Panduranga_Coffee_Works_Logo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-Cm-YjI">
+                    <rect key="frame" x="34" y="144" width="346" height="132"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="132" id="Gd9-4L-0YP"/>
+                        <constraint firstAttribute="width" constant="346" id="q7V-dD-n1U"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.22745098039215686" green="0.082352941176470587" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Of-bp-tEB" firstAttribute="top" secondItem="v4h-Cm-YjI" secondAttribute="bottom" constant="212" id="Giv-gG-lhk"/>
+                <constraint firstItem="v4h-Cm-YjI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q4W-2R-zo5"/>
+                <constraint firstItem="xjA-dQ-tVG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VR8-ou-Xvl"/>
+                <constraint firstItem="xjA-dQ-tVG" firstAttribute="top" secondItem="9Of-bp-tEB" secondAttribute="bottom" constant="20" id="Z9h-v4-3zf"/>
+                <constraint firstItem="v4h-Cm-YjI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="cRu-e7-GEG"/>
+                <constraint firstItem="9Of-bp-tEB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g83-cH-fkI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Login_Button" width="493" height="117"/>
+        <image name="Panduranga_Coffee_Works_Logo (1)" width="347" height="132"/>
+        <image name="Sign_Up_Button" width="493" height="117"/>
+    </resources>
+</document>
