@@ -21,45 +21,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-bp-tEB">
-                    <rect key="frame" x="83" y="488" width="248" height="58"/>
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dTM-r3-vAE">
+                    <rect key="frame" x="93" y="498" width="110" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-dQ-tVG">
+                    <rect key="frame" x="99" y="761" width="216" height="51"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="248" id="gad-4C-Iuy"/>
-                        <constraint firstAttribute="height" constant="58" id="qdc-Xo-fzn"/>
+                        <constraint firstAttribute="height" constant="51" id="5ff-6n-jXC"/>
+                        <constraint firstAttribute="width" constant="216" id="q8F-kx-eAJ"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="Sign_Up_Button"/>
+                    <connections>
+                        <action selector="signUpTapped:" destination="-1" eventType="touchUpInside" id="65c-7P-Thc"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Panduranga_Coffee_Works_Logo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-Cm-YjI">
+                    <rect key="frame" x="83" y="144" width="248" height="109"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="109" id="Gd9-4L-0YP"/>
+                        <constraint firstAttribute="width" constant="248" id="q7V-dD-n1U"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-bp-tEB">
+                    <rect key="frame" x="99" y="690" width="216" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="fC3-85-Ph2"/>
+                        <constraint firstAttribute="width" constant="216" id="ffQ-8v-ceR"/>
                     </constraints>
                     <state key="normal" title="Button" image="Login_Button"/>
                     <connections>
                         <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="Pax-1t-7Ji"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dTM-r3-vAE">
-                    <rect key="frame" x="93" y="498" width="110" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-dQ-tVG">
-                    <rect key="frame" x="83" y="566" width="248" height="58"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="58" id="kpT-T5-aq0"/>
-                        <constraint firstAttribute="width" constant="248" id="rzI-t6-ofh"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="Sign_Up_Button"/>
-                </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Panduranga_Coffee_Works_Logo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-Cm-YjI">
-                    <rect key="frame" x="34" y="144" width="346" height="132"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="132" id="Gd9-4L-0YP"/>
-                        <constraint firstAttribute="width" constant="346" id="q7V-dD-n1U"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.22745098039215686" green="0.082352941176470587" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="9Of-bp-tEB" firstAttribute="top" secondItem="v4h-Cm-YjI" secondAttribute="bottom" constant="212" id="Giv-gG-lhk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xjA-dQ-tVG" secondAttribute="bottom" constant="50" id="CWK-0G-quK"/>
+                <constraint firstItem="xjA-dQ-tVG" firstAttribute="top" secondItem="9Of-bp-tEB" secondAttribute="bottom" constant="20" id="Efz-EF-ict"/>
                 <constraint firstItem="v4h-Cm-YjI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q4W-2R-zo5"/>
-                <constraint firstItem="xjA-dQ-tVG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VR8-ou-Xvl"/>
-                <constraint firstItem="xjA-dQ-tVG" firstAttribute="top" secondItem="9Of-bp-tEB" secondAttribute="bottom" constant="20" id="Z9h-v4-3zf"/>
+                <constraint firstItem="9Of-bp-tEB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZUB-PK-FbS"/>
                 <constraint firstItem="v4h-Cm-YjI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="cRu-e7-GEG"/>
-                <constraint firstItem="9Of-bp-tEB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g83-cH-fkI"/>
+                <constraint firstItem="xjA-dQ-tVG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zRg-eb-Q0g"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>

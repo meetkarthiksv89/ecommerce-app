@@ -22,6 +22,10 @@ class StartUpViewController: UIViewController {
        navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     
+    @IBAction func signUpTapped(_ sender: Any) {
+        
+        navigationController?.pushViewController(SignUpViewController(), animated: true)
+    }
     /*
     // MARK: - Navigation
 

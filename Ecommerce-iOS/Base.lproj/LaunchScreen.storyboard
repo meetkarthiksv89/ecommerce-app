@@ -19,7 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Panduranga_Coffee_Works_Logo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="NOZ-r3-w1B">
-                                <rect key="frame" x="199" y="440" width="16" height="16"/>
+                                <rect key="frame" x="62.5" y="394" width="289" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="Oym-Lx-UMj"/>
+                                    <constraint firstAttribute="height" constant="108" id="ehf-Px-GcG"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2274509804" green="0.08235294118" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -32,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Se-Ed-sLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183" y="379"/>
+            <point key="canvasLocation" x="182.60869565217394" y="378.34821428571428"/>
         </scene>
     </scenes>
     <resources>
