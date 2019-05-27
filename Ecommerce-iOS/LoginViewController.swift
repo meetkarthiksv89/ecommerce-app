@@ -18,9 +18,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         userName.attributedPlaceholder = NSAttributedString(string: "Username",
-                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F)])
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F, alpha: Int(0.4))])
         password.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F)])
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F, alpha: Int(0.4))])
 
         // Do any additional setup after loading the view.
     }
@@ -30,6 +30,9 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        navigationController?.present(ProductsViewController(), animated: true, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         
     }

@@ -20,11 +20,11 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         name.attributedPlaceholder = NSAttributedString(string: "Name",
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F)])
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F, alpha: Int(0.4))])
         email.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F)])
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F, alpha: Int(0.4))])
         password.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F)])
+                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F, alpha: Int(0.4))])
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
