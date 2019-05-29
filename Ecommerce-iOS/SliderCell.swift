@@ -31,6 +31,7 @@ class OptionsCell: SliderCell {
         var label = UILabel()
         label.text = "Coffee Type"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Avenir", size: 16)!
         return label
     }()
     
@@ -38,6 +39,7 @@ class OptionsCell: SliderCell {
         let label = UILabel()
         label.text = "With Chicory"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Avenir-Medium", size: 16)!
         return label
     }()
     
@@ -87,7 +89,7 @@ class OptionsCell: SliderCell {
         allConstraints += optionsHorizontal
         
         let sliderVertical = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-10-[optionValue]-10-[slider]",
+            withVisualFormat: "V:|-10-[optionValue]-5-[slider]",
             metrics: nil,
             views: views)
         allConstraints += sliderVertical
