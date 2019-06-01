@@ -11,6 +11,7 @@
 		851DD9C4229E29A400431C19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851DD9C3229E29A400431C19 /* GoogleService-Info.plist */; };
 		851DD9C6229E4B4600431C19 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851DD9C5229E4B4600431C19 /* UIView+Animation.swift */; };
 		8551238F22A2261C008F1BA5 /* PNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551238E22A2261C008F1BA5 /* PNavBarView.swift */; };
+		8551239122A265E9008F1BA5 /* PButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551239022A265E9008F1BA5 /* PButton.swift */; };
 		855B3FF6229A182F0019E42D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B3FF5229A182F0019E42D /* AppDelegate.swift */; };
 		855B3FFB229A182F0019E42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855B3FF9229A182F0019E42D /* Main.storyboard */; };
 		855B3FFD229A182F0019E42D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855B3FFC229A182F0019E42D /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		855B4009229A197C0019E42D /* StartUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855B4007229A197C0019E42D /* StartUpViewController.xib */; };
 		855B400A229A197C0019E42D /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B4008229A197C0019E42D /* StartUpViewController.swift */; };
 		855B400D229A1A390019E42D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B400B229A1A390019E42D /* LoginViewController.swift */; };
-		855B400E229A1A390019E42D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855B400C229A1A390019E42D /* LoginViewController.xib */; };
 		855B4015229B31000019E42D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B4013229B31000019E42D /* SignUpViewController.swift */; };
 		855B4016229B31000019E42D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855B4014229B31000019E42D /* SignUpViewController.xib */; };
 		855B4018229B3DE30019E42D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B4017229B3DE30019E42D /* UIColor+Hex.swift */; };
@@ -54,6 +54,7 @@
 		851DD9C3229E29A400431C19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		851DD9C5229E4B4600431C19 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		8551238E22A2261C008F1BA5 /* PNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNavBarView.swift; sourceTree = "<group>"; };
+		8551239022A265E9008F1BA5 /* PButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PButton.swift; sourceTree = "<group>"; };
 		855B3FF2229A182F0019E42D /* Ecommerce-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		855B3FF5229A182F0019E42D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855B3FFA229A182F0019E42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		855B4007229A197C0019E42D /* StartUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartUpViewController.xib; sourceTree = "<group>"; };
 		855B4008229A197C0019E42D /* StartUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		855B400B229A1A390019E42D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		855B400C229A1A390019E42D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		855B4013229B31000019E42D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		855B4014229B31000019E42D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		855B4017229B3DE30019E42D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
@@ -241,7 +241,6 @@
 				855B3FF9229A182F0019E42D /* Main.storyboard */,
 				855B3FFE229A182F0019E42D /* LaunchScreen.storyboard */,
 				855B4007229A197C0019E42D /* StartUpViewController.xib */,
-				855B400C229A1A390019E42D /* LoginViewController.xib */,
 				855B4014229B31000019E42D /* SignUpViewController.xib */,
 				855B4043229B67BD0019E42D /* ProductsViewController.xib */,
 				855B4047229B79670019E42D /* ProductCellCollectionViewCell.xib */,
@@ -249,6 +248,7 @@
 				855B404E229BBD760019E42D /* SliderCell.swift */,
 				85FC879222A0DC8600564DD5 /* PTextField.swift */,
 				8551238E22A2261C008F1BA5 /* PNavBarView.swift */,
+				8551239022A265E9008F1BA5 /* PButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				855B400E229A1A390019E42D /* LoginViewController.xib in Resources */,
 				855B4009229A197C0019E42D /* StartUpViewController.xib in Resources */,
 				855B4000229A182F0019E42D /* LaunchScreen.storyboard in Resources */,
 				855B3FFD229A182F0019E42D /* Assets.xcassets in Resources */,
@@ -411,6 +410,7 @@
 				855B4041229B42D50019E42D /* IQNSArray+Sort.swift in Sources */,
 				855B4015229B31000019E42D /* SignUpViewController.swift in Sources */,
 				855B4048229B79670019E42D /* ProductCellCollectionViewCell.swift in Sources */,
+				8551239122A265E9008F1BA5 /* PButton.swift in Sources */,
 				851DD9C6229E4B4600431C19 /* UIView+Animation.swift in Sources */,
 				855B403E229B42D50019E42D /* IQUIViewController+Additions.swift in Sources */,
 				855B4034229B42D50019E42D /* IQBarButtonItem.swift in Sources */,

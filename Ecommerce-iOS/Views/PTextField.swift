@@ -19,26 +19,18 @@ class PTextField: UITextField {
         }
     }
     
-//    override var attributedPlaceholder: NSAttributedString? {
-//        get {
-//            return self.attributedPlaceholder
-//        }
-//        set {
-//            self.attributedPlaceholder = NSAttributedString(string: self.attributedPlaceholder!.string,
-//                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(rgb: 0xE8A94F, alpha: 0.4)])
-//        }
-//    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    fileprivate func setupView() {
         self.textColor = UIColor.brandYellow
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.brandYellow.cgColor
-        self.layer.cornerRadius = 20.0
+        self.layer.cornerRadius = 25.0
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        
-       
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {

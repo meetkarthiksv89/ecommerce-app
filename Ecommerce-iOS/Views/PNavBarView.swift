@@ -10,7 +10,7 @@ import UIKit
 
 class PNavBarView: UIView {
     
-    var imageView: UIImageView = {
+    fileprivate var imageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "nav_image"))
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,6 @@ class PNavBarView: UIView {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.brandBrown
-        label.text = "Login"
         label.textAlignment = .center
         label.font = UIFont(name: "Avenir", size: 25)!
         return label
@@ -30,14 +29,11 @@ class PNavBarView: UIView {
     var backButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setImage(UIImage(named: "back"), for: .normal)
-        //button.setTitle("Name your Button ", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
