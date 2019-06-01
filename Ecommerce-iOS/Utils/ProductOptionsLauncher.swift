@@ -71,15 +71,7 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             drawerView.backgroundColor = UIColor(rgb: 0xF3E7CB, alpha: 1)
             drawerView.layer.cornerRadius = 20;
-            drawerView
-                
-                
-                
-                
-                
-                
-                
-                .layer.masksToBounds = true;
+            drawerView.layer.masksToBounds = true;
             
             
             

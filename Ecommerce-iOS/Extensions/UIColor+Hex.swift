@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int, alpha: Int) {
+    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
@@ -19,7 +19,7 @@ extension UIColor {
     }
     
     
-    convenience init(rgb: Int, alpha: Int) {
+    convenience init(rgb: Int, alpha: CGFloat) {
         self.init(
             red: (rgb >> 16) & 0xFF,
             green: (rgb >> 8) & 0xFF,
@@ -27,4 +27,14 @@ extension UIColor {
             alpha: alpha
         )
     }
+    
+    static var brandYellow: UIColor {
+          return  UIColor(rgb: 0xE8A94F, alpha: 1)
+    }
+    
+    static var brandBrown: UIColor {
+        return UIColor(rgb: 0x3A1500, alpha: 1)
+    }
+    
+    
 }

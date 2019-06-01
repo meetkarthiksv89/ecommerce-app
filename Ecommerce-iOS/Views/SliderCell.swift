@@ -53,20 +53,12 @@ class OptionsCell: SliderCell {
         return slider
     }()
     
-    override func setupViews() {
-        super.setupViews()
-       // backgroundColor = UIColor.blue
-        
-         addSubview(optionType)
-        addSubview(optionValue)
-        addSubview(slider)
-        
+    fileprivate func addConstraints() {
         let views: [String: Any] = [
             "optionType": optionType,
             "optionValue": optionValue,
             "slider":slider]
         
-        // 2
         var allConstraints: [NSLayoutConstraint] = []
         
         
@@ -101,11 +93,16 @@ class OptionsCell: SliderCell {
         allConstraints += sliderHorizontal
         
         NSLayoutConstraint.activate(allConstraints)
-        
-        
+    }
+    
+    override func setupViews() {
+        super.setupViews()
        
-     
         
-       
+        addSubview(optionType)
+        addSubview(optionValue)
+        addSubview(slider)
+        
+        addConstraints()
     }
 }
