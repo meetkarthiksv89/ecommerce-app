@@ -40,6 +40,12 @@ class PNavBarView: UIView {
         setupViews()
     }
     
+    convenience init(title: String) {
+        self.init(frame: .zero)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        setupViews()
+    }
+    
     func setupViews() {
         addSubview(imageView)
         addSubview(title)
@@ -76,7 +82,7 @@ class PNavBarView: UIView {
         imageConstrains += backButtonVertical
         
         
-        
+
         NSLayoutConstraint.activate(imageConstrains)
     }
     

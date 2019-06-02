@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ProductCellDelegate {
+    func addToCartDidSelect()
+}
+
 class ProductCellCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -19,6 +23,7 @@ class ProductCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
+    var delegate: ProductCellDelegate?
     
     fileprivate func configureCell() {
         self.layer.cornerRadius = 20;
@@ -49,7 +54,6 @@ class ProductCellCollectionViewCell: UICollectionViewCell {
                 subtitle.font = UIFont(name: subtitle.font.fontName, size: 12)
                 price.font = UIFont(name: price.font.fontName, size: 28)
                 productDescription.font = UIFont(name: productDescription.font.fontName, size: 16)
-                
             }
         }
     }
@@ -60,6 +64,6 @@ class ProductCellCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func addToCartButtonTapped(_ sender: Any) {
-        
+        delegate?.addToCartDidSelect()
     }
 }

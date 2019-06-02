@@ -14,49 +14,8 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     
     let blackView = UIView()
     
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor(rgb: 0xF3E7CB, alpha: 1)
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        return cv
-    }()
+    let drawerView = ProductOptionsDrawerView(frame: .zero)
     
-   
-    let chooseOptionsLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Choose Options"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Avenir-Heavy", size: 25)!
-        return label
-    }()
-    
-    let priceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "₹500"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Avenir-Heavy", size: 35)!
-        return label
-    }()
-    
-    let cartButton: UIButton = {
-        let button = UIButton(type: .custom)
-//        button.setTitle("Cart", for: .normal)
-        button.setImage(UIImage(named: "cart_icon"), for: .normal)
-        button.addTarget(self, action: #selector(buttonClicked), for: .touchDragInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let priceLabel2: UILabel = {
-        let label = UILabel()
-        label.text = "₹500"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Avenir-Heavy", size: 35)!
-        return label
-    }()
-    
-    let drawerView = UIView()
     
     let cellId = "OptionsCellId"
     
@@ -64,66 +23,11 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
         print("Called")
     }
     
-    func showBlackView() {
+    func showDrawView() {
         
         if let window = UIApplication.shared.keyWindow {
             
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            drawerView.backgroundColor = UIColor(rgb: 0xF3E7CB, alpha: 1)
-            drawerView.layer.cornerRadius = 20;
-            drawerView.layer.masksToBounds = true;
-            
-            
-            
-            drawerView.addSubview(collectionView)
-            
-            drawerView.addSubview(chooseOptionsLabel)
-            drawerView.addSubview(priceLabel)
-            //drawerView.addSubview(priceLabel2)
-            drawerView.addSubview(cartButton)
-            
-            drawerView.addConstraint(NSLayoutConstraint(item: chooseOptionsLabel, attribute: .centerX, relatedBy: .equal, toItem: drawerView, attribute: .centerX, multiplier: 1, constant: 0))
-            
-            
-
-            let views: [String: Any] = [
-                "collectionView": collectionView,
-                "chooseOptionsLabel":chooseOptionsLabel,
-                "priceLabel":priceLabel,
-                "cartButton":cartButton,
-            "priceLabel2":priceLabel2]
-
-            // 2
-            var allConstraints: [NSLayoutConstraint] = []
-
-
-            let collectionVertical = NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-10-[chooseOptionsLabel]-10-[collectionView]-20-[priceLabel]-30-|",
-                metrics: nil,
-                views: views)
-            allConstraints += collectionVertical
-
-            let collectionHorizontal = NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-20-[collectionView]-20-|",
-                metrics: nil,
-                views: views)
-            allConstraints += collectionHorizontal
-
-            let priceLabelHorizontal = NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-30-[priceLabel]-[cartButton(50)]-20-|",
-                metrics: nil,
-                views: views)
-            allConstraints += priceLabelHorizontal
-            
-            let cartButtonVertical = NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-10-[chooseOptionsLabel]-10-[collectionView]-20-[cartButton(50)]-30-|",
-                metrics: nil,
-                views: views)
-            allConstraints += cartButtonVertical
-
-            NSLayoutConstraint.activate(allConstraints)
-            
-            
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
             
             blackView.layer.cornerRadius = 20;
@@ -182,15 +86,10 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     
     override init() {
         super.init()
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        drawerView.collectionView.dataSource = self
+        drawerView.collectionView.delegate = self
         
-
-        
-        
-        collectionView.register(OptionsCell.self, forCellWithReuseIdentifier: cellId)
-
-        
+        drawerView.collectionView.register(OptionsCell.self, forCellWithReuseIdentifier: cellId)
     }
 }
 

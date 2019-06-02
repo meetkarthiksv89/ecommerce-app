@@ -10,7 +10,13 @@ import UIKit
 
 class PTextField: UITextField {
     
-    
+    var secureField: Bool? {
+        didSet {
+            self.secureField = true
+            self.isSecureTextEntry = true
+        }
+    }
+
     var placeholderText: String? {
         didSet {
             self.attributedPlaceholder = NSAttributedString(string: self.placeholderText ?? "",
@@ -26,6 +32,7 @@ class PTextField: UITextField {
         self.layer.cornerRadius = 25.0
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
+        self.font = UIFont(name: "Avenir-Heavy", size: 14)!
     }
     
     override init(frame: CGRect) {

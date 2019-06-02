@@ -9,7 +9,11 @@
 import UIKit
 import Firebase
 
-class ProductsViewController: UIViewController {
+class ProductsViewController: UIViewController,ProductCellDelegate{
+    func addToCartDidSelect() {
+        optionsLauncher.showDrawView()
+    }
+    
 
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -88,11 +92,12 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellIdentifier, for: indexPath) as! ProductCellCollectionViewCell
+        productCell.delegate = self
         return productCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        optionsLauncher.showBlackView()
+        optionsLauncher.showDrawView()
     }
     
     

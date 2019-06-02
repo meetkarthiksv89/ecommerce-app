@@ -10,7 +10,7 @@ import UIKit
 
 class PButton: UIButton {
     
-    enum type {
+    public enum type {
         case brown
         case yellow
     }
@@ -29,7 +29,7 @@ class PButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate func setupView(type: type) {
+    func setupView(type: type) {
         
         switch type {
         case .brown:
