@@ -35,6 +35,9 @@ extension UIColor {
     static var brandBrown: UIColor {
         return UIColor(rgb: 0x3A1500, alpha: 1)
     }
+    static var brandCream: UIColor {
+        return UIColor(rgb: 0xF3E7CB, alpha: 1)
+    }
     
     
 }

@@ -34,6 +34,14 @@ class PNavBarView: UIView {
         return button
     }()
     
+    var navButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        //button.setImage(UIImage(named: "cart_brown_icon"), for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +58,7 @@ class PNavBarView: UIView {
         addSubview(imageView)
         addSubview(title)
         addSubview(backButton)
+        addSubview(navButton)
         addViewContraints()
     }
     
@@ -61,7 +70,8 @@ class PNavBarView: UIView {
         let views = [
             "imageView":imageView,
             "title": title,
-            "backButton":backButton
+            "backButton":backButton,
+            "navButton":navButton
         ]
         
         var imageConstrains: [NSLayoutConstraint] = []
@@ -73,13 +83,20 @@ class PNavBarView: UIView {
         let titleVertical = NSLayoutConstraint.constraints(withVisualFormat: "V:[title]-30-|", metrics: nil, views: views)
         
         let backButtonHorizonal = NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[backButton(30)]", metrics: nil, views: views)
-        let backButtonVertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|-50-[backButton(30)]", metrics: nil, views: views)
+        let backButtonVertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|-30-[backButton(30)]", metrics: nil, views: views)
+        
+        let navButtonHorizonal = NSLayoutConstraint.constraints(withVisualFormat: "H:[navButton(40)]-20-|", metrics: nil, views: views)
+        let navButtonVertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|-40-[navButton(40)]", metrics: nil, views: views)
+        
+        
         imageConstrains += titleHorizontal
         imageConstrains += titleVertical
         imageConstrains += imageHorizontalConstraint
         imageConstrains += imageVerticalConstraint
         imageConstrains += backButtonHorizonal
         imageConstrains += backButtonVertical
+        imageConstrains += navButtonHorizonal
+        imageConstrains += navButtonVertical
         
         
 

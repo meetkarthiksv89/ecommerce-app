@@ -13,6 +13,7 @@ class StartUpViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
@@ -24,6 +25,6 @@ class StartUpViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: Any) {
         
-        navigationController?.pushViewController(SignUpViewController(), animated: true)
+        navigationController?.pushViewController(ProductViewController(), animated: true)
     }
 }

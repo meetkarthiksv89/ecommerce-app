@@ -25,6 +25,7 @@ class ProductCellCollectionViewCell: UICollectionViewCell {
     
     var delegate: ProductCellDelegate?
     
+    
     fileprivate func configureCell() {
         self.layer.cornerRadius = 20;
         self.layer.masksToBounds = true;

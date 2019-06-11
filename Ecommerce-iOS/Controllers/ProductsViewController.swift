@@ -9,9 +9,14 @@
 import UIKit
 import Firebase
 
-class ProductsViewController: UIViewController,ProductCellDelegate{
+class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
+    func checkoutButtonClicked() {
+        optionsLauncher.handleCartDismiss()
+        navigationController?.pushViewController(InfoViewController(), animated: true)
+    }
+    
     func addToCartDidSelect() {
-        optionsLauncher.showDrawView()
+        optionsLauncher.showOptionsDrawView()
     }
     
 
@@ -22,6 +27,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
+        optionsLauncher.cartDrawerView.cartDelegate = self
         //signOut()
         authenticateUserAndConfigureView()
         
@@ -30,9 +36,10 @@ class ProductsViewController: UIViewController,ProductCellDelegate{
     }
     
     
-    let optionsLauncher = ProductOptionsLauncher()
+   let optionsLauncher = ProductOptionsLauncher()
     
     @IBAction func cartButtonTapped(_ sender: Any) {
+        optionsLauncher.showCartDrawView()
         
     }
     
@@ -97,8 +104,6 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        optionsLauncher.showDrawView()
+        optionsLauncher.showOptionsDrawView()
     }
-    
-    
 }
