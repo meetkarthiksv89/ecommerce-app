@@ -12,7 +12,7 @@ import Firebase
 class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
     func checkoutButtonClicked() {
         optionsLauncher.handleCartDismiss()
-        navigationController?.pushViewController(InfoViewController(), animated: true)
+        navigationController?.pushViewController(CheckoutViewController(), animated: true)
     }
     
     func addToCartDidSelect() {
@@ -75,6 +75,25 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    
+    @IBOutlet weak var selectionViewTrailing: NSLayoutConstraint!
+    
+    @IBOutlet weak var selectionView: UIView!
+    @IBOutlet weak var selectionViewLeading: NSLayoutConstraint!
+    
+    @IBOutlet weak var TeaButton: UIButton!
+    @IBAction func TeaTapped(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.selectionView.leadingAnchor.constraint(equalTo: self.TeaButton.leadingAnchor)
+            self.selectionView.trailingAnchor.constraint(equalTo: self.TeaButton.trailingAnchor)
+           self.view.layoutIfNeeded()
+            
+        }, completion: nil)
+    }
+    
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

@@ -49,13 +49,13 @@ class PViewController: UIViewController {
         ]
         var constraints: [NSLayoutConstraint] = []
         
-        headerHeightConstraint = header.heightAnchor.constraint(equalToConstant: view.frame.height/3)
+        headerHeightConstraint = header.heightAnchor.constraint(equalToConstant: view.frame.height/4)
         view.addConstraint(headerHeightConstraint)
         
         footerHeightConstraint = footer.heightAnchor.constraint(equalToConstant: 40)
         view.addConstraint(footerHeightConstraint)
         
-        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[headerView]-0-[contentView]-0-[footerView]-0-|", metrics: nil, views: views)
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[headerView]-0-[contentView]-0-[footerView]-40-|", metrics: nil, views: views)
         
         constraints += verticalConstraints
         

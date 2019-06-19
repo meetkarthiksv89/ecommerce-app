@@ -64,7 +64,7 @@ class CartDrawerView: DrawerView {
     
     @objc func checkoutButtonTapped() {
         if let delegate = self.cartDelegate {
-             self.cartDelegate?.checkoutButtonClicked()
+             delegate.checkoutButtonClicked()
         }
     }
     
@@ -178,7 +178,7 @@ class CartFooterView: UIView {
         
         var constraints: [NSLayoutConstraint] = []
         
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[checkoutButton]-[stackView]-10-|", metrics: nil, views: views)
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:[stackView]-10-|", metrics: nil, views: views)
         
         constraints += horizontalConstraints
         
