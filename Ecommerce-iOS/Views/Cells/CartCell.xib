@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CartOptionCellId" id="gTV-IL-0wX" customClass="CartCell" customModule="Ecommerce_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="627" height="121"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="627" height="121"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luM-zF-qdr">
+                        <rect key="frame" x="0.0" y="0.0" width="627" height="121"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AG" translatesAutoresizingMaskIntoConstraints="NO" id="BCk-7f-u4V">
+                                <rect key="frame" x="10" y="25.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8tO-J2-TQv"/>
+                                    <constraint firstAttribute="height" constant="70" id="Kpr-M1-ffc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-Sq-fuw">
+                                <rect key="frame" x="90" y="50.5" width="101.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mOx-Z6-OjQ" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
+                                <rect key="frame" x="476" y="10" width="141" height="101"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uu-xr-uGY">
+                                        <rect key="frame" x="0.0" y="37" width="25" height="27"/>
+                                        <state key="normal" image="increment_icon"/>
+                                        <connections>
+                                            <action selector="incrementButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bia-ny-Ttd"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-Kd-6wS">
+                                        <rect key="frame" x="45" y="30" width="51" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Kilos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpG-q5-dtc">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-6q-dbd">
+                                                <rect key="frame" x="5" y="20.5" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-yC-yb9">
+                                        <rect key="frame" x="116" y="37" width="25" height="27"/>
+                                        <state key="normal" image="decrement_icon">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decrementButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jhd-CY-BSD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NZj-Kd-6wS" firstAttribute="centerY" secondItem="mOx-Z6-OjQ" secondAttribute="centerY" id="dbk-KU-PQw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.90588235294117647" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mOx-Z6-OjQ" firstAttribute="top" secondItem="luM-zF-qdr" secondAttribute="top" constant="10" id="Hwg-l0-nrB"/>
+                            <constraint firstItem="ph2-Sq-fuw" firstAttribute="leading" secondItem="BCk-7f-u4V" secondAttribute="trailing" constant="10" id="JyZ-0s-Th0"/>
+                            <constraint firstItem="BCk-7f-u4V" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="L4p-3y-z5T"/>
+                            <constraint firstItem="mOx-Z6-OjQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ph2-Sq-fuw" secondAttribute="trailing" constant="10" id="Qm2-9T-Zgx"/>
+                            <constraint firstAttribute="bottom" secondItem="mOx-Z6-OjQ" secondAttribute="bottom" constant="10" id="ZnJ-aX-0F3"/>
+                            <constraint firstItem="BCk-7f-u4V" firstAttribute="leading" secondItem="luM-zF-qdr" secondAttribute="leading" constant="10" id="pPl-41-3od"/>
+                            <constraint firstAttribute="trailing" secondItem="mOx-Z6-OjQ" secondAttribute="trailing" constant="10" id="pQt-2K-mjW"/>
+                            <constraint firstItem="ph2-Sq-fuw" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="qfN-J0-FlL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="luM-zF-qdr" secondAttribute="bottom" id="7Dt-SU-8EP"/>
+                <constraint firstItem="luM-zF-qdr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ayw-vi-2qZ"/>
+                <constraint firstAttribute="trailing" secondItem="luM-zF-qdr" secondAttribute="trailing" id="S3A-Xk-lwk"/>
+                <constraint firstItem="luM-zF-qdr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kV4-N5-7B7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="627" height="121"/>
+            <connections>
+                <outlet property="cellView" destination="luM-zF-qdr" id="otv-1S-Deh"/>
+                <outlet property="price" destination="7yY-6q-dbd" id="fIE-Hn-CJr"/>
+                <outlet property="productTitle" destination="ph2-Sq-fuw" id="6Sz-5D-8aL"/>
+                <outlet property="quantity" destination="mpG-q5-dtc" id="8Bj-WH-XgI"/>
+            </connections>
+            <point key="canvasLocation" x="-302.17391304347831" y="163.72767857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AG" width="800" height="800"/>
+        <image name="decrement_icon" width="25" height="27"/>
+        <image name="increment_icon" width="25" height="27"/>
+    </resources>
+</document>

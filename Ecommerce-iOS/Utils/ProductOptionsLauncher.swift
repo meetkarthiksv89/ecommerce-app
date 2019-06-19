@@ -19,7 +19,9 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     let cartDrawerView = CartDrawerView(frame: .zero)
     let optionsDrawerView = ProductOptionsDrawerView(frame: .zero)
     
-    let cellId = "OptionsCellId"
+    let cellId = "OptionCellId"
+    let quantityCellID = "quantityCellID"
+    let cartOptionCellId = "CartOptionCellId"
     
     @objc func buttonClicked(){
         print("Called")
@@ -111,15 +113,33 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        return cell
+        
+        if collectionView == optionsDrawerView.collectionView {
+            if indexPath.item == 1 {
+                return collectionView.dequeueReusableCell(withReuseIdentifier: quantityCellID, for: indexPath)
+                
+            }
+            else {
+               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+               return cell
+            }
+        }
+        
+        else {
+         return collectionView.dequeueReusableCell(withReuseIdentifier: cartOptionCellId, for: indexPath)
+        }
+        
+        
+        
+     
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       
         return CGSize(width: collectionView.frame.width, height: 80)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -131,12 +151,22 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
         cartDrawerView.collectionView.dataSource = self
         cartDrawerView.collectionView.delegate = self
         
-        cartDrawerView.collectionView.register(CartCell.self, forCellWithReuseIdentifier: cellId)
+        //cartDrawerView.collectionView.register(CartCell.self, forCellWithReuseIdentifier: cellId)
+        let nibCell = UINib(nibName: "CartCell", bundle: nil)
+        cartDrawerView.collectionView.register(nibCell, forCellWithReuseIdentifier: cartOptionCellId)
         
         optionsDrawerView.collectionView.dataSource = self
         optionsDrawerView.collectionView.delegate = self
         
-        optionsDrawerView.collectionView.register(OptionsCell.self, forCellWithReuseIdentifier: cellId)
+        let optionsNib = UINib(nibName: "OptionCell", bundle: nil)
+        
+        optionsDrawerView.collectionView.register(optionsNib, forCellWithReuseIdentifier: cellId)
+       
+        
+        
+        let quantityNib = UINib(nibName: "QuantityCell", bundle: nil)
+        
+        optionsDrawerView.collectionView.register(quantityNib, forCellWithReuseIdentifier: quantityCellID)
     }
 }
 
