@@ -65,13 +65,13 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleOptionsDismiss)))
             
-            blackView.layer.cornerRadius = 20;
-            blackView.layer.masksToBounds = true;
+//            blackView.layer.cornerRadius = 20;
+//            blackView.layer.masksToBounds = true;
             
             window.addSubview(blackView)
             window.addSubview(optionsDrawerView)
             
-            let height: CGFloat = 400
+            let height: CGFloat = 320
             let y = window.frame.height - height
             optionsDrawerView.frame = CGRect(x: 0, y: window.frame.height
                 , width: window.frame.width, height: height)
@@ -139,8 +139,13 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == optionsDrawerView.collectionView{
+             return CGSize(width: collectionView.frame.width, height: 50)
+        }
+        else{
+             return CGSize(width: collectionView.frame.width, height: 80)
+        }
        
-        return CGSize(width: collectionView.frame.width, height: 80)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10

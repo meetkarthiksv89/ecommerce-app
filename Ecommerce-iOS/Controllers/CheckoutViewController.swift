@@ -8,7 +8,34 @@
 
 import UIKit
 
+class AddressInfo {
+    
+    var addressLine1:String?
+    var addressLine2:String?
+    var city:String?
+    var state:String?
+    var zipcode:String?
+    
+    init(addressLine1: String, addressLine2:String, city: String, state: String, zipcode: String) {
+        self.addressLine1 = addressLine1
+        self.addressLine2 = addressLine2
+        self.city = city
+        self.state = state
+        self.zipcode = zipcode
+    }
+}
+
 class CheckoutViewController: PViewController, CartDelegate {
+    
+    
+    enum Address:NSInteger {
+        case addressLine1 = 0
+        case addressLine2
+        case city
+        case state
+        case zipcode
+    }
+    
     func checkoutButtonClicked() {
         cartLauncher.handleCartDismiss()
     }
@@ -22,6 +49,7 @@ class CheckoutViewController: PViewController, CartDelegate {
     }
     
     let cartLauncher = ProductOptionsLauncher()
+    let addressInfo = AddressInfo(addressLine1: "20 Poncetta Dr", addressLine2: "Apt 309", city: "Daly City", state: "California", zipcode: "577101")
     
     @objc func cartButtonTapped() {
         cartLauncher.showCartDrawView()
@@ -144,8 +172,26 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont(name: "Avenir-Medium", size: 16)
         cell.backgroundColor = UIColor.clear
+        
+        
+        switch indexPath.item {
+        case Address.addressLine1.rawValue:
+            cell.textLabel?.text = addressInfo.addressLine1
+        case Address.addressLine2.rawValue:
+            cell.textLabel?.text = addressInfo.addressLine2
+        case Address.city.rawValue:
+            cell.textLabel?.text = addressInfo.city
+        case Address.state.rawValue:
+            cell.textLabel?.text = addressInfo.state
+        case Address.zipcode.rawValue:
+            cell.textLabel?.text = addressInfo.zipcode
+        default:
+            cell.textLabel?.text = addressInfo.addressLine2
+        }
         return cell
     }
+    
+    
     
 
 }

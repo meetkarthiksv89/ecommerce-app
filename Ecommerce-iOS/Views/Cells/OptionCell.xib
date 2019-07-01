@@ -20,27 +20,23 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-Xi-tOc">
-                        <rect key="frame" x="10" y="39" width="93.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="20" y="39" width="81" height="20.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ySv-AJ-qDc" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
-                        <rect key="frame" x="337" y="35.5" width="189" height="27"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ySv-AJ-qDc" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
+                        <rect key="frame" x="389.5" y="37.5" width="126.5" height="23.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-Tg-CIi">
-                                <rect key="frame" x="0.0" y="0.0" width="25" height="27"/>
-                                <state key="normal" image="back_selection_arrow_icon"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Chicory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-sV-iqZ">
-                                <rect key="frame" x="45" y="3.5" width="99" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W54-oW-TEA">
-                                <rect key="frame" x="164" y="0.0" width="25" height="27"/>
-                                <state key="normal" image="front_selection_arrow_icon">
+                                <rect key="frame" x="109.5" y="0.5" width="17" height="22"/>
+                                <state key="normal" image="down_arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -51,8 +47,8 @@
             <color key="backgroundColor" red="0.95294117649999999" green="0.90588235289999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ySv-AJ-qDc" firstAttribute="centerY" secondItem="DWc-5R-Kho" secondAttribute="centerY" id="P5H-Dx-9vd"/>
-                <constraint firstItem="JHc-Xi-tOc" firstAttribute="leading" secondItem="DWc-5R-Kho" secondAttribute="leading" constant="10" id="gQ2-49-FeZ"/>
-                <constraint firstAttribute="trailing" secondItem="ySv-AJ-qDc" secondAttribute="trailing" constant="10" id="nDo-XX-sOS"/>
+                <constraint firstItem="JHc-Xi-tOc" firstAttribute="leading" secondItem="DWc-5R-Kho" secondAttribute="leading" constant="20" id="gQ2-49-FeZ"/>
+                <constraint firstAttribute="trailing" secondItem="ySv-AJ-qDc" secondAttribute="trailing" constant="20" id="nDo-XX-sOS"/>
                 <constraint firstItem="ySv-AJ-qDc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JHc-Xi-tOc" secondAttribute="trailing" constant="20" id="oCN-41-lPf"/>
                 <constraint firstItem="JHc-Xi-tOc" firstAttribute="centerY" secondItem="ySv-AJ-qDc" secondAttribute="centerY" id="spx-Z3-aro"/>
             </constraints>
@@ -65,7 +61,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="back_selection_arrow_icon" width="25" height="27"/>
-        <image name="front_selection_arrow_icon" width="25" height="27"/>
+        <image name="down_arrow" width="17" height="8"/>
     </resources>
 </document>

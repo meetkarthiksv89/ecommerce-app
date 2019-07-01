@@ -72,7 +72,7 @@ class ProductOptionsDrawerView: DrawerView {
         allConstraints += priceLabelHorizontal
         
         let chooseOptionsLabelVertical = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-0-[chooseOptionsLabel]-0-|",
+            withVisualFormat: "V:|-0-[chooseOptionsLabel]-10-|",
             metrics: nil,
             views: views)
         allConstraints += chooseOptionsLabelVertical

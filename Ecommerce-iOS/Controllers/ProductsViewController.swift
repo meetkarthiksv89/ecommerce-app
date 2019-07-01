@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ViewAnimator
 
 class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
     
@@ -39,12 +40,14 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         optionsLauncher.cartDrawerView.cartDelegate = self
         //signOut()
         authenticateUserAndConfigureView()
-        CoreDataManager.shared.addProductsToCoreData()
+        //CoreDataManager.shared.addProductsToCoreData()
         do {
             products = try context.fetch(Product.fetchRequest())
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+      
+        
 //
        
         
@@ -65,6 +68,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+
     }
     
     
@@ -86,9 +90,9 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         }
     }
     
-    @IBAction func testSignOut(_ sender: Any) {
-        signOut()
-    }
+//    @IBAction func testSignOut(_ sender: Any) {
+//        signOut()
+//    }
     func authenticateUserAndConfigureView() {
         if Auth.auth().currentUser == nil {
             DispatchQueue.main.async {
@@ -129,6 +133,13 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         }, completion: nil)
     }
     
+    @IBAction func teaClicked(_ sender: Any) {
+        
+    }
+    @IBAction func tabBarItemClicked(_ sender: UIButton) {
+        let indexPath = IndexPath(item: sender.tag, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
+    }
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

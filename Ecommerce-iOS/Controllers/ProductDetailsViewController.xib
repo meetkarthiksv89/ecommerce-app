@@ -24,6 +24,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grand_aroma" translatesAutoresizingMaskIntoConstraints="NO" id="imy-yd-2df">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
                     <color key="backgroundColor" red="0.91372549020000005" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <viewLayoutGuide key="safeArea" id="RZs-SW-9Hl"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-kE-JYk">
                     <rect key="frame" x="10" y="269" width="394" height="527"/>

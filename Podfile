@@ -10,5 +10,6 @@ target 'Ecommerce-iOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'ViewAnimator'
 
 end
