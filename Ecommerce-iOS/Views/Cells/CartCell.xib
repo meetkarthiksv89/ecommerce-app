@@ -23,14 +23,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="627" height="121"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AG" translatesAutoresizingMaskIntoConstraints="NO" id="BCk-7f-u4V">
-                                <rect key="frame" x="10" y="25.5" width="70" height="70"/>
+                                <rect key="frame" x="0.0" y="25.5" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8tO-J2-TQv"/>
                                     <constraint firstAttribute="height" constant="70" id="Kpr-M1-ffc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-Sq-fuw">
-                                <rect key="frame" x="90" y="50.5" width="101.5" height="20.5"/>
+                                <rect key="frame" x="70" y="50.5" width="101.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,11 +80,11 @@
                         <color key="backgroundColor" red="0.95294117647058818" green="0.90588235294117647" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mOx-Z6-OjQ" firstAttribute="top" secondItem="luM-zF-qdr" secondAttribute="top" constant="10" id="Hwg-l0-nrB"/>
-                            <constraint firstItem="ph2-Sq-fuw" firstAttribute="leading" secondItem="BCk-7f-u4V" secondAttribute="trailing" constant="10" id="JyZ-0s-Th0"/>
+                            <constraint firstItem="ph2-Sq-fuw" firstAttribute="leading" secondItem="BCk-7f-u4V" secondAttribute="trailing" id="JyZ-0s-Th0"/>
                             <constraint firstItem="BCk-7f-u4V" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="L4p-3y-z5T"/>
                             <constraint firstItem="mOx-Z6-OjQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ph2-Sq-fuw" secondAttribute="trailing" constant="10" id="Qm2-9T-Zgx"/>
                             <constraint firstAttribute="bottom" secondItem="mOx-Z6-OjQ" secondAttribute="bottom" constant="10" id="ZnJ-aX-0F3"/>
-                            <constraint firstItem="BCk-7f-u4V" firstAttribute="leading" secondItem="luM-zF-qdr" secondAttribute="leading" constant="10" id="pPl-41-3od"/>
+                            <constraint firstItem="BCk-7f-u4V" firstAttribute="leading" secondItem="luM-zF-qdr" secondAttribute="leading" id="pPl-41-3od"/>
                             <constraint firstAttribute="trailing" secondItem="mOx-Z6-OjQ" secondAttribute="trailing" constant="10" id="pQt-2K-mjW"/>
                             <constraint firstItem="ph2-Sq-fuw" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="qfN-J0-FlL"/>
                         </constraints>

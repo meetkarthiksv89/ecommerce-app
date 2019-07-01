@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="gTV-IL-0wX" customClass="ProductCell" customModule="Ecommerce_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="266"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="266"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-Mm-RfC">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grand_aroma" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-AI-ybA">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.66274509803921566" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hjo-AI-ybA" secondAttribute="bottom" id="3zH-7F-ybF"/>
+                            <constraint firstItem="hjo-AI-ybA" firstAttribute="top" secondItem="fxT-Mm-RfC" secondAttribute="top" id="8tX-hE-tE8"/>
+                            <constraint firstAttribute="width" constant="200" id="NaX-Yu-NnZ"/>
+                            <constraint firstAttribute="height" constant="200" id="X4s-Uo-c6v"/>
+                            <constraint firstItem="hjo-AI-ybA" firstAttribute="leading" secondItem="fxT-Mm-RfC" secondAttribute="leading" id="eZX-8M-2DC"/>
+                            <constraint firstAttribute="trailing" secondItem="hjo-AI-ybA" secondAttribute="trailing" id="tMe-2H-N6y"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pZH-EU-pWU">
+                        <rect key="frame" x="0.0" y="210" width="195" height="47"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-5I-mb3">
+                                <rect key="frame" x="0.0" y="0.0" width="165" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU8-Li-IP0">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="₹500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-97-Ixb">
+                                        <rect key="frame" x="0.0" y="23.5" width="165" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pj-Ou-9X2">
+                                <rect key="frame" x="165" y="8.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GvD-ma-QiM"/>
+                                    <constraint firstAttribute="width" constant="30" id="Hng-SX-Sx7"/>
+                                </constraints>
+                                <state key="normal" image="plus_button"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="pZH-EU-pWU" firstAttribute="top" secondItem="fxT-Mm-RfC" secondAttribute="bottom" constant="10" id="8Le-uB-loT"/>
+                <constraint firstAttribute="trailing" secondItem="pZH-EU-pWU" secondAttribute="trailing" constant="5" id="BqG-QO-gkO"/>
+                <constraint firstItem="pZH-EU-pWU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ve7-zi-fFm"/>
+                <constraint firstAttribute="trailing" secondItem="fxT-Mm-RfC" secondAttribute="trailing" id="Xv3-iV-NyT"/>
+                <constraint firstItem="fxT-Mm-RfC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bGw-s8-9iT"/>
+                <constraint firstItem="fxT-Mm-RfC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="f28-5C-tDh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="200" height="266"/>
+            <connections>
+                <outlet property="imageBackground" destination="fxT-Mm-RfC" id="t36-Ee-bLl"/>
+            </connections>
+            <point key="canvasLocation" x="-169.56521739130437" y="105.80357142857143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="grand_aroma" width="800" height="800"/>
+        <image name="plus_button" width="50" height="55"/>
+    </resources>
+</document>

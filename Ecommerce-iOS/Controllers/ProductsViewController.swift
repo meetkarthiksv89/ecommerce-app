@@ -10,6 +10,14 @@ import UIKit
 import Firebase
 
 class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
+    
+    
+    
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let context = CoreDataManager.shared.persistentContainer.viewContext
+    
+    var products: [Product] = []
+    
     func checkoutButtonClicked() {
         optionsLauncher.handleCartDismiss()
         navigationController?.pushViewController(CheckoutViewController(), animated: true)
@@ -26,13 +34,37 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.isHidden = true
         optionsLauncher.cartDrawerView.cartDelegate = self
         //signOut()
         authenticateUserAndConfigureView()
+        CoreDataManager.shared.addProductsToCoreData()
+        do {
+            products = try context.fetch(Product.fetchRequest())
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+//
+       
+        
+//
+//        appDelegate.saveContext()
+//        friends.append(friend)
+//        let index = IndexPath(row:friends.count - 1, section:0)
+//        collectionView?.insertItems(at: [index])
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        do {
+            products = try context.fetch(Product.fetchRequest())
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
     }
     
     
@@ -70,10 +102,13 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     }
     
     func configureViewComponents() {
-        let nibCell = UINib(nibName: "ProductCellCollectionViewCell", bundle: nil)
+        let nibCell = UINib(nibName: "ProductsCell", bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: productCellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.estimatedItemSize = CGSize(width: self.view.frame.width, height: 330)
     }
     
     
@@ -102,25 +137,42 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var width = self.view.frame.size.width - 40
-        width = width - (width/5)
-        return CGSize(width: width, height: collectionView.frame.size.height)
-    }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+////        var width = self.view.frame.size.width - 40
+////        width = width - (width/5)
+//        return CGSize(width: self.view.frame.width, height: 350)
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//
+//        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellIdentifier, for: indexPath) as! ProductCellCollectionViewCell
+        let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellIdentifier, for: indexPath) as! ProductsCell
         productCell.delegate = self
+//        productCell.delegate = self
+//        productCell.title.text = products[indexPath.item].title
+//        productCell.subtitle.text = products[indexPath.item].subtitle
+//        productCell.price.text = String(products[indexPath.item].price)
+        //productCell.productDescription.text = products[indexPath.item].productDescription
         return productCell
+        
+        
     }
+
+    
+    func didSelect() {
+        navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
+    }
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         optionsLauncher.showOptionsDrawView()

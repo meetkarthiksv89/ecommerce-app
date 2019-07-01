@@ -64,7 +64,7 @@ class DrawerView: UIView {
         
         constraints += horizontalHeaderViewConstraints
         
-        let horizontalCollectionViewConstraints =   NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[collectionView]-10-|", metrics: nil, views: views)
+        let horizontalCollectionViewConstraints =   NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[collectionView]-0-|", metrics: nil, views: views)
         
         constraints += horizontalCollectionViewConstraints
         

@@ -24,6 +24,27 @@ class SliderCell: UICollectionViewCell {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //class OptionsCell: SliderCell {
 //    
 //    let optionType:UILabel = {

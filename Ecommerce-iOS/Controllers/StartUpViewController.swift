@@ -25,6 +25,6 @@ class StartUpViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: Any) {
         
-        navigationController?.pushViewController(ProductViewController(), animated: true)
+        //navigationController?.pushViewController(ProductViewController(), animated: true)
     }
 }

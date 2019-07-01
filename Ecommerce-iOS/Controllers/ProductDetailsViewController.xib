@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="Ecommerce_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="optionsCollectionView" destination="IUn-Gg-YMi" id="0wf-Vb-Uu4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grand_aroma" translatesAutoresizingMaskIntoConstraints="NO" id="imy-yd-2df">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                    <color key="backgroundColor" red="0.91372549020000005" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-kE-JYk">
+                    <rect key="frame" x="10" y="269" width="394" height="527"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ChH-qJ-3zw">
+                            <rect key="frame" x="0.0" y="10" width="394" height="505"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SG-fW-D7w">
+                                    <rect key="frame" x="0.0" y="0.0" width="189.5" height="41"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                    <color key="textColor" red="0.91372549020000005" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-1J-HuK">
+                                    <rect key="frame" x="0.0" y="49" width="394" height="456"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <mutableString key="text">Grand Aroma was created as a response to grand consumer’s desires for a different, more sophisticated and more urban concept of filter coffee experience. Grand Aroma is an exclusive blend of premium quality roasted and ground coffee made from variety of carefully selected coffee beans grown on the high altitude, sky kissing plantations in India. Grand Aroma is blended with 15% of speciality chicory to give a rich caramel taste and  mouthfeel. For the true connoisseurs, for the beginning of a new day and work, for the admirers of small rituals and for conceptualizing great ideas and for maximum delight - Grand Aroma is the right choice! Grand AromaGrand Aroma was created as a response to grand consumer’s desires for a different, more sophisticated and more urban concept of filter coffee experience. Grand Aroma is an exclusive blend of premium quality roasted and ground coffee made from variety of carefully selected coffee beans grown on the high altitude, sky kissing plantations in India. Grand Aroma is blended with 15% of speciality chicory to give a rich caramel taste and  mouthfeel. For the true connoisseurs, for the beginning of a new day and work, for the admirers of small rituals and for conceptualizing great ideas and for maximum delight - Grand Aroma is the right choice! Grand Aroma</mutableString>
+                                    <color key="textColor" red="0.94509803921568625" green="0.91764705882352937" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IUn-Gg-YMi">
+                                    <rect key="frame" x="0.0" y="5" width="394" height="500"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="500" id="n6Z-OR-Ljm"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lRE-z9-Ucs">
+                                        <size key="itemSize" width="50" height="50"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="IUn-Gg-YMi" secondAttribute="bottom" id="Hph-Ai-D4g"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ChH-qJ-3zw" firstAttribute="width" secondItem="CF1-kE-JYk" secondAttribute="width" id="Bwc-ti-2YB"/>
+                        <constraint firstItem="ChH-qJ-3zw" firstAttribute="top" secondItem="CF1-kE-JYk" secondAttribute="top" constant="10" id="Jz2-jC-dRQ"/>
+                        <constraint firstItem="ChH-qJ-3zw" firstAttribute="leading" secondItem="CF1-kE-JYk" secondAttribute="leading" id="M22-9R-4ZT"/>
+                        <constraint firstItem="IUn-Gg-YMi" firstAttribute="width" secondItem="CF1-kE-JYk" secondAttribute="width" id="V2G-V7-kSg"/>
+                        <constraint firstAttribute="bottom" secondItem="ChH-qJ-3zw" secondAttribute="bottom" id="o2K-B9-InL"/>
+                        <constraint firstAttribute="trailing" secondItem="ChH-qJ-3zw" secondAttribute="trailing" id="zyh-vr-sbk"/>
+                    </constraints>
+                </scrollView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-Pt-QnZ">
+                    <rect key="frame" x="10" y="796" width="394" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDW-n0-ePe">
+                            <rect key="frame" x="8" y="8" width="86.5" height="40"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="37"/>
+                            <color key="textColor" red="0.91372549020000005" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddZ-16-wRt">
+                            <rect key="frame" x="346" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="DUE-qh-HSG"/>
+                                <constraint firstAttribute="height" constant="40" id="We5-MM-QyS"/>
+                            </constraints>
+                            <state key="normal" image="plus_button"/>
+                            <connections>
+                                <action selector="addToCartTapped:" destination="-1" eventType="touchUpInside" id="8Lu-No-7kw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.22745098039215686" green="0.082352941176470587" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="imy-yd-2df" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="32R-Xd-rVx"/>
+                <constraint firstItem="0Mb-Pt-QnZ" firstAttribute="top" secondItem="CF1-kE-JYk" secondAttribute="bottom" id="7Zx-nV-8Mi"/>
+                <constraint firstItem="imy-yd-2df" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7zQ-RJ-Aaj"/>
+                <constraint firstItem="imy-yd-2df" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GmB-eb-Lgh"/>
+                <constraint firstItem="CF1-kE-JYk" firstAttribute="top" secondItem="imy-yd-2df" secondAttribute="bottom" id="dRZ-6z-61g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Mb-Pt-QnZ" secondAttribute="bottom" constant="10" id="j0f-G3-BGm"/>
+                <constraint firstItem="imy-yd-2df" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="lCX-6U-OaY"/>
+                <constraint firstItem="0Mb-Pt-QnZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="tkM-rM-ZvR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Mb-Pt-QnZ" secondAttribute="trailing" constant="10" id="uMW-Gj-g3V"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CF1-kE-JYk" secondAttribute="trailing" constant="10" id="yBS-6v-56m"/>
+                <constraint firstItem="CF1-kE-JYk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="zU3-lG-B5F"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-165.21739130434784" y="150.66964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="grand_aroma" width="800" height="800"/>
+        <image name="plus_button" width="50" height="55"/>
+    </resources>
+</document>
