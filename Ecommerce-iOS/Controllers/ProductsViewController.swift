@@ -10,12 +10,7 @@ import UIKit
 import Firebase
 import ViewAnimator
 
-
-
 class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
-    
-    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let context = CoreDataManager.shared.persistentContainer.viewContext
     
     var products: [Product] = []
     

@@ -64,7 +64,6 @@
 		858DA2C522BAEC9000693082 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DA2C322BAEC9000693082 /* OptionCell.swift */; };
 		858DA2C622BAEC9000693082 /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 858DA2C422BAEC9000693082 /* OptionCell.xib */; };
 		858DA2E222BAFF9200693082 /* pandurangachatbot-export.json in Resources */ = {isa = PBXBuildFile; fileRef = 858DA2E122BAFF9200693082 /* pandurangachatbot-export.json */; };
-		858DA2E422BB0FCF00693082 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DA2E322BB0FCF00693082 /* CoreDataManager.swift */; };
 		858DA2E722BB422200693082 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DA2E522BB422200693082 /* ProductCell.swift */; };
 		858DA2E822BB422200693082 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 858DA2E622BB422200693082 /* ProductCell.xib */; };
 		858DA2EB22BB435E00693082 /* ProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DA2E922BB435E00693082 /* ProductsCell.swift */; };
@@ -137,7 +136,6 @@
 		858DA2C322BAEC9000693082 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		858DA2C422BAEC9000693082 /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
 		858DA2E122BAFF9200693082 /* pandurangachatbot-export.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pandurangachatbot-export.json"; sourceTree = "<group>"; };
-		858DA2E322BB0FCF00693082 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		858DA2E522BB422200693082 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		858DA2E622BB422200693082 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		858DA2E922BB435E00693082 /* ProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCell.swift; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 				855B3FFC229A182F0019E42D /* Assets.xcassets */,
 				851DD9C3229E29A400431C19 /* GoogleService-Info.plist */,
 				855B4001229A182F0019E42D /* Info.plist */,
-				858DA2E322BB0FCF00693082 /* CoreDataManager.swift */,
 			);
 			path = "Ecommerce-iOS";
 			sourceTree = "<group>";
@@ -526,7 +523,6 @@
 				858DA2B622BADB3800693082 /* CheckoutViewController.swift in Sources */,
 				855B4015229B31000019E42D /* SignUpViewController.swift in Sources */,
 				8566B6B922E3C6DA00445249 /* ProductViewModel.swift in Sources */,
-				858DA2E422BB0FCF00693082 /* CoreDataManager.swift in Sources */,
 				8551239122A265E9008F1BA5 /* PButton.swift in Sources */,
 				851DD9C6229E4B4600431C19 /* UIView+Animation.swift in Sources */,
 				8551239322A2F7A6008F1BA5 /* PInputView.swift in Sources */,
