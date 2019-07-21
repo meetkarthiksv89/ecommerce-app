@@ -10,9 +10,9 @@ import UIKit
 import Firebase
 import ViewAnimator
 
+
+
 class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
-    
-    
     
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = CoreDataManager.shared.persistentContainer.viewContext
@@ -29,7 +29,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     }
     
 
-    
+    let productViewModel = ProductViewModel()
     @IBOutlet weak var collectionView: UICollectionView!
     let productCellIdentifier = "ProductCellId"
     
@@ -40,35 +40,10 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         optionsLauncher.cartDrawerView.cartDelegate = self
         //signOut()
         authenticateUserAndConfigureView()
-        //CoreDataManager.shared.addProductsToCoreData()
-        do {
-            products = try context.fetch(Product.fetchRequest())
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
+        
+        
+        print(productViewModel.products!)
       
-        
-//
-       
-        
-//
-//        appDelegate.saveContext()
-//        friends.append(friend)
-//        let index = IndexPath(row:friends.count - 1, section:0)
-//        collectionView?.insertItems(at: [index])
-        
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        do {
-            products = try context.fetch(Product.fetchRequest())
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-
     }
     
     
@@ -140,6 +115,19 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         let indexPath = IndexPath(item: sender.tag, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
     }
+    
+    fileprivate func assignProductCellCategory(_ indexPath: IndexPath, _ productCell: ProductsCell) {
+        switch indexPath.item {
+        case 0:
+            productCell.category = productViewModel.getCategory(name: .Coffee)
+        case 1:
+            productCell.category = productViewModel.getCategory(name: .Tea)
+        case 2:
+            productCell.category = productViewModel.getCategory(name: .Spices)
+        default:
+            productCell.category = productViewModel.getCategory(name: .Tea)
+        }
+    }
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -148,7 +136,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return productViewModel.categories.count
     }
     
     
@@ -164,26 +152,16 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
 //    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellIdentifier, for: indexPath) as! ProductsCell
         productCell.delegate = self
-//        productCell.delegate = self
-//        productCell.title.text = products[indexPath.item].title
-//        productCell.subtitle.text = products[indexPath.item].subtitle
-//        productCell.price.text = String(products[indexPath.item].price)
-        //productCell.productDescription.text = products[indexPath.item].productDescription
+        assignProductCellCategory(indexPath, productCell)
         return productCell
-        
-        
     }
 
-    
     func didSelect() {
         navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
     }
-    
-    
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         optionsLauncher.showOptionsDrawView()

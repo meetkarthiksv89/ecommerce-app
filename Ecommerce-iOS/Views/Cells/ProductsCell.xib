@@ -48,9 +48,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="578" height="241"/>
             <connections>
+                <outlet property="cellTitle" destination="G50-tk-JaU" id="B9u-Ss-E24"/>
                 <outlet property="productsCollectionView" destination="pTD-6J-8zP" id="BDk-so-Kpr"/>
             </connections>
-            <point key="canvasLocation" x="-131.8840579710145" y="197.20982142857142"/>
+            <point key="canvasLocation" x="-254" y="175"/>
         </collectionViewCell>
     </objects>
 </document>

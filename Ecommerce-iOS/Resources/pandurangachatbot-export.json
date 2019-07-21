@@ -1,248 +1,168 @@
-{
-  "products" : {
-    "PCWCOF001" : {
-      "description" : "Grand Aroma was created as a response to grand consumer’s desires for a different, more sophisticated and more urban concept of filter coffee experience. Grand Aroma is an exclusive blend of premium quality roasted and ground coffee made from variety of carefully selected coffee beans grown on the high altitude, sky kissing plantations in India. It is blended with 15% of speciality chicory to give a rich caramel taste and  mouthfeel. For the true connoisseurs, for the beginning of a new day and work, for the admirers of small rituals and for conceptualising great ideas and for maximum delight.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20.png?alt=media&token=84566942-8579-4faf-9647-14b30fc76e7e",
-      "price" : "500",
-      "prices" : [ {
-        "price" : 580,
-        "variant" : [ "500g", "Pure Coffee" ]
-      } ],
-      "product_url" : "https://www.pandurangacoffee.com/product-page/grand-aroma-coffee",
-      "subtitle" : "AA Plantation Coffee with 15% Chicory Or Pure Coffee",
-      "title" : "Grand Aroma",
-      "variation" : {
-        "coffee-type" : {
-          "message" : "Do you prefer Pure Coffee or Coffee with Chicory?",
-          "options" : [ "Pure Coffee", "With Chicory" ]
+[
+    {
+        "id":"PCWCOF001",
+        "description" : "Grand Aroma was created as a response to grand consumer’s desires for a different, more sophisticated and more urban concept of filter coffee experience. Grand Aroma is an exclusive blend of premium quality roasted and ground coffee made from variety of carefully selected coffee beans grown on the high altitude, sky kissing plantations in India. It is blended with 15% of speciality chicory to give a rich caramel taste and  mouthfeel. For the true connoisseurs, for the beginning of a new day and work, for the admirers of small rituals and for conceptualising great ideas and for maximum delight.",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20.png?alt=media&token=84566942-8579-4faf-9647-14b30fc76e7e",
+        "price" : "500",
+        "prices" : [ {
+            "price" : 580,
+            "variant" : [ "500g", "Pure Coffee" ]
+        } ],
+        "product_url" : "https://www.pandurangacoffee.com/product-page/grand-aroma-coffee",
+        "subtitle" : "AA Plantation Coffee with 15% Chicory Or Pure Coffee",
+        "title" : "Grand Aroma",
+        "variation" : {
+            "coffee-type" : {
+                "message" : "Do you prefer Pure Coffee or Coffee with Chicory?",
+                "options" : [ "Pure Coffee", "With Chicory" ]
+            },
+            "packet-weight" : {
+                "message" : "What packet weight would you prefer?",
+                "options" : [ "500g" ]
+            },
+            "quantity" : "quantity-kilo-500g"
         },
-        "packet-weight" : {
-          "message" : "What packet weight would you prefer?",
-          "options" : [ "500g" ]
-        },
-        "quantity" : "quantity-kilo-500g"
-      },
-      "variations" : [ null, "packet-weight" ]
+        "variations" : [ null, "packet-weight" ],
+        "category":"coffee",
+        "imageFileName" : "GA"
     },
-    "PCWCOF002" : {
-      "description" : "Gold is a blend that enables you to enjoy the full and refined quality flavor of strong filter coffee. Aroma Grand has undergone extensive testing and trials to find the right recipe and blend, producing the coffee from the finest and highest quality coffee beans in compliance with our consumer’s taste. Aroma Gold contains 30% Chicory to give it a creamy caramel finish. With its superb packaging design, quality blend and reasonable price, this product will indisputably find its way to the hearts of true lovers and connoisseurs of filter coffee.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Aroma%20Gold.png?alt=media&token=e4faac22-34e0-469a-8e86-2b4e4c68b380",
-      "price" : "480",
-      "product_url" : "https://www.pandurangacoffee.com/product-page/aroma-gold-coffee",
-      "subtitle" : "70% Coffee(AA Plantation) + 30% Chicory",
-      "title" : "Aroma Gold",
-      "variation" : {
-        "packet-weight" : {
-          "message" : "Please choose your packet weight",
-          "options" : [ "500g" ]
+    {
+        "id":"PCWCOF002",
+        "description" : "Gold is a blend that enables you to enjoy the full and refined quality flavor of strong filter coffee. Aroma Grand has undergone extensive testing and trials to find the right recipe and blend, producing the coffee from the finest and highest quality coffee beans in compliance with our consumer’s taste. Aroma Gold contains 30% Chicory to give it a creamy caramel finish. With its superb packaging design, quality blend and reasonable price, this product will indisputably find its way to the hearts of true lovers and connoisseurs of filter coffee.",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Aroma%20Gold.png?alt=media&token=e4faac22-34e0-469a-8e86-2b4e4c68b380",
+        "price" : "480",
+        "product_url" : "https://www.pandurangacoffee.com/product-page/aroma-gold-coffee",
+        "subtitle" : "70% Coffee(AA Plantation) + 30% Chicory",
+        "title" : "Aroma Gold",
+        "variation" : {
+            "packet-weight" : {
+                "message" : "Please choose your packet weight",
+                "options" : [ "500g" ]
+            },
+            "quantity" : "quantity-kilo-500g"
         },
-        "quantity" : "quantity-kilo-500g"
-      }
+         "category":"coffee",
+         "imageFileName" : "AG"
     },
-    "PCWCOF003" : {
-      "description" : "Brown Gold is an original blend of selected coffee beans made according to special recipe and designed for the ones who enjoy rich foam. It is the best-selling product of Panduranga Coffee and the best-selling coffee brand on the domestic market as well as in the region. In the mind of the consumers, it is positioned as \"the first real coffee after the wild coffee roasting businesses\", which secured the continued loyalty of the consumers through-out the decades.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Brown%20Gold.png?alt=media&token=0c01e7e2-a283-4c38-bfcb-798193bc9f17",
-      "price" : "320",
-      "prices" : [ {
-        "price" : 430,
-        "variant" : [ "500g", "Pure Coffee" ]
-      }, {
-        "price" : 430,
-        "variant" : [ "250g", "Pure Coffee" ]
-      } ],
-      "product_url" : "https://www.pandurangacoffee.com/product-page/brown-gold-coffee",
-      "subtitle" : "With 15% Chicory Or Pure Coffee",
-      "title" : "Brown Gold",
-      "variation" : {
-        "coffee-type" : {
-          "message" : "Do you prefer Pure Coffee or Coffee with Chicory?",
-          "options" : [ "Pure Coffee", "With Chicory" ]
+    {
+        "id":"PCWCOF003",
+        "description" : "Brown Gold is an original blend of selected coffee beans made according to special recipe and designed for the ones who enjoy rich foam. It is the best-selling product of Panduranga Coffee and the best-selling coffee brand on the domestic market as well as in the region. In the mind of the consumers, it is positioned as \"the first real coffee after the wild coffee roasting businesses\", which secured the continued loyalty of the consumers through-out the decades.",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Brown%20Gold.png?alt=media&token=0c01e7e2-a283-4c38-bfcb-798193bc9f17",
+        "price" : "320",
+        "prices" : [ {
+            "price" : 430,
+            "variant" : [ "500g", "Pure Coffee" ]
+        }, {
+            "price" : 430,
+            "variant" : [ "250g", "Pure Coffee" ]
+        } ],
+        "product_url" : "https://www.pandurangacoffee.com/product-page/brown-gold-coffee",
+        "subtitle" : "With 15% Chicory Or Pure Coffee",
+        "title" : "Brown Gold",
+        "variation" : {
+            "coffee-type" : {
+                "message" : "Do you prefer Pure Coffee or Coffee with Chicory?",
+                "options" : [ "Pure Coffee", "With Chicory" ]
+            },
+            "packet-weight" : {
+                "message" : "Please choose your packet weight",
+                "options" : [ "500g", "250g" ]
+            },
+            "quantity" : "quantity-kilo"
         },
-        "packet-weight" : {
-          "message" : "Please choose your packet weight",
-          "options" : [ "500g", "250g" ]
-        },
-        "quantity" : "quantity-kilo"
-      }
+         "category":"coffee",
+         "imageFileName" : "BG"
     },
-    "PCWCOF004" : {
-      "description" : "French Blend renders a strong Filter Coffee Experience, for those who seek the best refined flavor, lavish aroma and pleasantly mild bitterness. Panduranga's French Blend is a special brand within the strong filter coffee palette. French blend is made from carefully selected Arabica coffee beans grown in the best Indian Bababudan coffee plantations. The entire coffee manufacturing process, from selecting and blending the coffee beans to special grinding technology, is performed under the top expert team super-vision.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/French%20Blend.png?alt=media&token=f99f2078-3b9b-4414-9050-c5ecfd3cbf86",
-      "price" : "300",
-      "product_url" : "https://www.pandurangacoffee.com/product-page/french-blend-coffee",
-      "subtitle" : "70% Coffee + 30% Chicory",
-      "title" : "French Blend",
-      "variation" : {
-        "packet-weight" : {
-          "message" : "Please choose your grind quantity",
-          "options" : [ "500g", "250g" ]
+    {
+        "id":"PCWCOF004",
+        "description" : "French Blend renders a strong Filter Coffee Experience, for those who seek the best refined flavor, lavish aroma and pleasantly mild bitterness. Panduranga's French Blend is a special brand within the strong filter coffee palette. French blend is made from carefully selected Arabica coffee beans grown in the best Indian Bababudan coffee plantations. The entire coffee manufacturing process, from selecting and blending the coffee beans to special grinding technology, is performed under the top expert team super-vision.",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/French%20Blend.png?alt=media&token=f99f2078-3b9b-4414-9050-c5ecfd3cbf86",
+        "price" : "300",
+        "product_url" : "https://www.pandurangacoffee.com/product-page/french-blend-coffee",
+        "subtitle" : "70% Coffee + 30% Chicory",
+        "title" : "French Blend",
+        "variation" : {
+            "packet-weight" : {
+                "message" : "Please choose your grind quantity",
+                "options" : [ "500g", "250g" ]
+            },
+            "quantity" : "quantity-kilo"
         },
-        "quantity" : "quantity-kilo"
-      }
+         "category":"coffee",
+         "imageFileName" : "FB"
     },
-    "PCWSPI001" : {
-      "description" : "One of the ancient spices that originated from southern India, cardamom is a spice with pungent flavor & aroma. It is made from a seed pod originating from the ginger plant family. Every other Indian house hold uses cardamom as either the entire pod or seeds separately in various Indian recipes. This spice serves it’s flavors in most cuisines all over the world. Famously known as Eliachi in India, it’s also added in coffee and tea decoctions for flavorsome beverage. A concoction made from cardamom seeds is believed to relieve digestive problems and improves the immune system.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Cardamom.png?alt=media&token=e381eabf-ea1e-44ac-83a9-f4b832a44d3b",
-      "price" : "250",
-      "product_url" : "https://www.pandurangacoffee.com/product-page/cardamom-spices",
-      "quantity" : "quantity-packet-100g",
-      "subtitle" : "Extrabold Cardamom",
-      "title" : "Cardamom",
-      "variation" : {
-        "packet-weight" : {
-          "message" : "Please choose your packet weight",
-          "options" : [ "100g" ]
+    {
+        "id":"PCWTEA001",
+        "description" : "Delight Tea invites you to experience and taste the freshness & flavour of Assam in your home. Every cup of Delight TEA contains 100% pure garden fresh tea leaves from selected Assam Tea estates, ideally located in the quality tea growing district of Dibrugarh in - - Upper Assam, home of the finest tea in the world. ",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Delight.png?alt=media&token=9fc17ef1-6136-4c07-95dc-b951a1022dad",
+        "price" : "400",
+        "product_url" : "https://www.pandurangacoffee.com/product-page/delight-tea",
+        "subtitle" : "Assam Tea",
+        "title" : "Delight",
+        "variation" : {
+            "packet-weight" : {
+                "message" : "Please choose your packet weight!",
+                "options" : [ "500g", "250g" ]
+            },
+            "quantity" : "quantity-kilo"
         },
-        "quantity" : "quantity-packet-100g"
-      }
+        "category":"tea",
+        "imageFileName" : "DT"
     },
-    "PCWSPI002" : {
-      "description" : "Known as the king of spices, sprinkling a pinch of pepper enhances the flavor of any recipe. Ground pepper is made from dried black peppercorns which is actually a fruit of black pepper plant from the “Piperaceae” family. The black pepper plant is a trailing, woody vine that grows in tropical climates. It is used as a spice and as well as a medicine to heal cold and cough, indigestion, treats skin problems and improves metabolism and immunity. It is also one of the widely traded spices in the world. ",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20(10).png?alt=media&token=d7669dfa-2e30-4b86-b2d6-069786aa7391",
-      "price" : "250",
-      "product_url" : "https://www.pandurangacoffee.com/product-page/pepper-spices",
-      "subtitle" : "Extrabold Pepper",
-      "title" : "Pepper",
-      "variation" : {
-        "packet-weight" : {
-          "message" : "Please choose your grind quantity",
-          "options" : [ "200g" ]
+    {
+        "id":"PCWTEA002",
+        "description" : "A healthy person’s best friend, Green tea is filled with antioxidants and nutrients. The biggest benefit of green tea is, this healthy beverage contains an antioxidant called Catechin that fights and protect against cell damage, improves brain functions, aides fat loss and lowers cholesterol levels. Green tea is made of unoxidized leaves and less processed compared to other teas and thus contains the most antioxidants. Make a cup for yourself by just adding few leaves into a pan of boiling water, strain the decoction and have it with some honey for pleasant taste.",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Green%20Tea.png?alt=media&token=b7794507-69bf-49aa-afc5-078e86244dc6",
+        "price" : "500",
+        "product_url" : "https://www.pandurangacoffee.com/product-page/green-tea",
+        "subtitle" : "Assam",
+        "title" : "Green Tea",
+        "variation" : {
+            "packet-weight" : {
+                "message" : "Please choose your grind quantity",
+                "options" : [ "250g" ]
+            },
+            "quantity" : "quantity-kilo"
         },
-        "quantity" : "quantity-packet-200g"
-      }
+         "category":"tea",
+         "imageFileName" : "GT"
     },
-    "PCWSUB001" : {
-      "description" : "We love pampering you if you are our coffee lover. We can go a tad bit extra in serving you our best coffee by delivering it to your doorstep. Sign up for our subscription service, choose your favorite coffee type and select one option from 3, 6 or 12 months. Forget keeping yourself a reminder to buy coffee regularly, just choose a subscription option and we will take care of the rest. Also you get to save your money on the total cost if you opt for these monthly subscriptions. Now isn’t this awesome! Subscribe and enjoy the flavors of Panduranga Coffee.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20.png?alt=media&token=84566942-8579-4faf-9647-14b30fc76e7e",
-      "price" : "1450",
-      "prices" : [ {
-        "price" : 1450,
-        "variant" : [ "Monthly", "3 Months", "500g" ]
-      }, {
-        "price" : 2900,
-        "variant" : [ "Monthly", "6 Months", "500g" ]
-      }, {
-        "price" : 5750,
-        "variant" : [ "Monthly", "12 Months", "500g" ]
-      } ],
-      "subtitle" : "3 Months, 6 Months or 12 Months",
-      "title" : "Subscription - Grand Aroma",
-      "variation" : {
-        "months" : {
-          "message" : "For how many months would you like to subscribe?",
-          "options" : [ "3 Months", "6 Months", "12 Months" ]
+    {
+        "id":"PCWSPI001",
+        "description" : "One of the ancient spices that originated from southern India, cardamom is a spice with pungent flavor & aroma. It is made from a seed pod originating from the ginger plant family. Every other Indian house hold uses cardamom as either the entire pod or seeds separately in various Indian recipes. This spice serves it’s flavors in most cuisines all over the world. Famously known as Eliachi in India, it’s also added in coffee and tea decoctions for flavorsome beverage. A concoction made from cardamom seeds is believed to relieve digestive problems and improves the immune system.",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Cardamom.png?alt=media&token=e381eabf-ea1e-44ac-83a9-f4b832a44d3b",
+        "price" : "250",
+        "product_url" : "https://www.pandurangacoffee.com/product-page/cardamom-spices",
+        "quantity" : "quantity-packet-100g",
+        "subtitle" : "Extrabold Cardamom",
+        "title" : "Cardamom",
+        "variation" : {
+            "packet-weight" : {
+                "message" : "Please choose your packet weight",
+                "options" : [ "100g" ]
+            },
+            "quantity" : "quantity-packet-100g"
         },
-        "packet-weight" : {
-          "message" : "Please choose your packet weight.",
-          "options" : [ "500g", "250g" ]
-        },
-        "quantity" : "quantity-kilo-subscription"
-      }
+        "category":"spices",
+        "imageFileName" : "CA"
     },
-    "PCWSUB002" : {
-      "description" : "Do you imagine yourself waking up every day to the smell of Panduranga coffee? Have you ever wished that fresh coffee delivered to you right at your doorstep all year long without you having to bother to buy coffee regularly? Then, the Panduranga Coffee subscription is for you! Just select your favorite coffee from our range of coffee and tea, then select  supply option of 3, 6, 12 months and choose from a monthly or bi-monthly delivery frequency and you're all good to go.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Delight.png?alt=media&token=9fc17ef1-6136-4c07-95dc-b951a1022dad",
-      "price" : "500",
-      "prices" : [ {
-        "price" : 1450,
-        "variant" : [ "Monthly", "3 Months", "500g" ]
-      }, {
-        "price" : 2900,
-        "variant" : [ "Monthly", "6 Months", "500g" ]
-      }, {
-        "price" : 5750,
-        "variant" : [ "Monthly", "12 Months", "500g" ]
-      }, {
-        "price" : 1450,
-        "variant" : [ "Monthly", "3 Months", "250g" ]
-      }, {
-        "price" : 2900,
-        "variant" : [ "Monthly", "6 Months", "250g" ]
-      }, {
-        "price" : 5750,
-        "variant" : [ "Monthly", "12 Months", "250g" ]
-      } ],
-      "subtitle" : "3 Months, 6 Months or 12 Months",
-      "title" : "Subsription - Tea",
-      "unit-weight" : "Kilo",
-      "variation" : {
-        "months" : {
-          "message" : "Please choose your grind quantity",
-          "options" : [ "3 Months", "6 Months", "12 Months" ]
+    {
+        "id":"PCWSPI002",
+        "description" : "Known as the king of spices, sprinkling a pinch of pepper enhances the flavor of any recipe. Ground pepper is made from dried black peppercorns which is actually a fruit of black pepper plant from the “Piperaceae” family. The black pepper plant is a trailing, woody vine that grows in tropical climates. It is used as a spice and as well as a medicine to heal cold and cough, indigestion, treats skin problems and improves metabolism and immunity. It is also one of the widely traded spices in the world. ",
+        "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20(10).png?alt=media&token=d7669dfa-2e30-4b86-b2d6-069786aa7391",
+        "price" : "250",
+        "product_url" : "https://www.pandurangacoffee.com/product-page/pepper-spices",
+        "subtitle" : "Extrabold Pepper",
+        "title" : "Pepper",
+        "variation" : {
+            "packet-weight" : {
+                "message" : "Please choose your grind quantity",
+                "options" : [ "200g" ]
+            },
+            "quantity" : "quantity-packet-200g"
         },
-        "packet-weight" : {
-          "message" : "Please choose your grind quantity",
-          "options" : [ "500g", "250g" ]
-        },
-        "quantity" : "quantity-kilo-subscription"
-      }
-    },
-    "PCWSUB003" : {
-      "description" : "We love pampering you if you are our coffee lover. We can go a tad bit extra in serving you our best coffee by delivering it to your doorstep. Sign up for our subscription service, choose your favorite coffee type and select one option from 3, 6 or 12 months. Forget keeping yourself a reminder to buy coffee regularly, just choose a subscription option and we will take care of the rest. Also you get to save your money on the total cost if you opt for these monthly subscriptions. Now isn’t this awesome! Subscribe and enjoy the flavors of Panduranga Coffee.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20.png?alt=media&token=84566942-8579-4faf-9647-14b30fc76e7e",
-      "price" : "1450",
-      "prices" : [ {
-        "price" : 1450,
-        "variant" : [ "Monthly", "3 Months", "500g" ]
-      }, {
-        "price" : 2900,
-        "variant" : [ "Monthly", "6 Months", "500g" ]
-      }, {
-        "price" : 5750,
-        "variant" : [ "Monthly", "12 Months", "500g" ]
-      }, {
-        "price" : 1450,
-        "variant" : [ "Monthly", "3 Months", "250g" ]
-      }, {
-        "price" : 2900,
-        "variant" : [ "Monthly", "6 Months", "250g" ]
-      }, {
-        "price" : 5750,
-        "variant" : [ "Monthly", "12 Months", "250g" ]
-      } ],
-      "subtitle" : "3 Months, 6 Months or 12 Months",
-      "title" : "Subscription - Grand Aroma",
-      "variation" : {
-        "months" : {
-          "message" : "For how many months would you like to subscribe?",
-          "options" : [ "3 Months", "6 Months", "12 Months" ]
-        },
-        "packet-weight" : {
-          "message" : "Please choose your packet weight.",
-          "options" : [ "500g", "250g" ]
-        },
-        "quantity" : "quantity-kilo-subscription"
-      }
-    },
-    "PCWTEA001" : {
-      "description" : "Delight Tea invites you to experience and taste the freshness & flavour of Assam in your home. Every cup of Delight TEA contains 100% pure garden fresh tea leaves from selected Assam Tea estates, ideally located in the quality tea growing district of Dibrugarh in - - Upper Assam, home of the finest tea in the world. ",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Delight.png?alt=media&token=9fc17ef1-6136-4c07-95dc-b951a1022dad",
-      "price" : "400",
-      "product_url" : "https://www.pandurangacoffee.com/product-page/delight-tea",
-      "subtitle" : "Assam Tea",
-      "title" : "Delight",
-      "variation" : {
-        "packet-weight" : {
-          "message" : "Please choose your packet weight!",
-          "options" : [ "500g", "250g" ]
-        },
-        "quantity" : "quantity-kilo"
-      }
-    },
-    "PCWTEA002" : {
-      "description" : "A healthy person’s best friend, Green tea is filled with antioxidants and nutrients. The biggest benefit of green tea is, this healthy beverage contains an antioxidant called Catechin that fights and protect against cell damage, improves brain functions, aides fat loss and lowers cholesterol levels. Green tea is made of unoxidized leaves and less processed compared to other teas and thus contains the most antioxidants. Make a cup for yourself by just adding few leaves into a pan of boiling water, strain the decoction and have it with some honey for pleasant taste.",
-      "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Green%20Tea.png?alt=media&token=b7794507-69bf-49aa-afc5-078e86244dc6",
-      "price" : "500",
-      "product_url" : "https://www.pandurangacoffee.com/product-page/green-tea",
-      "subtitle" : "Assam",
-      "title" : "Green Tea",
-      "variation" : {
-        "packet-weight" : {
-          "message" : "Please choose your grind quantity",
-          "options" : [ "250g" ]
-        },
-        "quantity" : "quantity-kilo"
-      }
+        "category":"spices",
+        "imageFileName" : "PE"
     }
-  }
-}
+]
+ 

@@ -16,6 +16,14 @@ class ProductsCell: UICollectionViewCell {
 
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
+    @IBOutlet weak var cellTitle: UILabel!
+    
+    var category: Category? {
+        didSet {
+            updateUI()
+        }
+    }
+    
     var delegate: ProductCellDelegate?
     
     let productsCellId = "ProductCell"
@@ -30,17 +38,27 @@ class ProductsCell: UICollectionViewCell {
         let layout = productsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = CGSize(width: 200, height: 400)
     }
+    
+    private func updateUI() {
+        cellTitle.text = category?.categoryName.capitalizingFirstLetter()
+    }
+    
 
 }
 
 extension ProductsCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return category?.categoryProducts.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productsCellId, for: indexPath) as! ProductCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productsCellId, for: indexPath) as? ProductCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.product = category?.categoryProducts[indexPath.item]
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
