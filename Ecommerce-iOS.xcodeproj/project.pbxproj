@@ -54,6 +54,9 @@
 		8566B6B922E3C6DA00445249 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566B6B822E3C6DA00445249 /* ProductViewModel.swift */; };
 		8566B6BB22E3C8C700445249 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566B6BA22E3C8C700445249 /* Category.swift */; };
 		8566B6BD22E3CC3A00445249 /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566B6BC22E3CC3A00445249 /* String+Capitalize.swift */; };
+		8566B6C722E513E200445249 /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566B6C622E513E200445249 /* MasterTabBarController.swift */; };
+		8566B6CA22E51B1800445249 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566B6C822E51B1800445249 /* AccountViewController.swift */; };
+		8566B6CB22E51B1800445249 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8566B6C922E51B1800445249 /* AccountViewController.xib */; };
 		85697C6A229E5A5700972E8C /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85697C69229E5A5700972E8C /* String+Email.swift */; };
 		858DA2B622BADB3800693082 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DA2B522BADB3800693082 /* CheckoutViewController.swift */; };
 		858DA2B922BADBBA00693082 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DA2B722BADBBA00693082 /* CartCell.swift */; };
@@ -126,6 +129,9 @@
 		8566B6B822E3C6DA00445249 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		8566B6BA22E3C8C700445249 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8566B6BC22E3CC3A00445249 /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
+		8566B6C622E513E200445249 /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
+		8566B6C822E51B1800445249 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		8566B6C922E51B1800445249 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		85697C69229E5A5700972E8C /* String+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Email.swift"; sourceTree = "<group>"; };
 		858DA2B522BADB3800693082 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		858DA2B722BADBBA00693082 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
@@ -349,6 +355,9 @@
 				858DA2B522BADB3800693082 /* CheckoutViewController.swift */,
 				85B313C922C87A0B00DF8CB8 /* ProductDetailsViewController.swift */,
 				85B313CA22C87A0B00DF8CB8 /* ProductDetailsViewController.xib */,
+				8566B6C622E513E200445249 /* MasterTabBarController.swift */,
+				8566B6C822E51B1800445249 /* AccountViewController.swift */,
+				8566B6C922E51B1800445249 /* AccountViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -453,6 +462,7 @@
 				855B4009229A197C0019E42D /* StartUpViewController.xib in Resources */,
 				855B4000229A182F0019E42D /* LaunchScreen.storyboard in Resources */,
 				858DA2C622BAEC9000693082 /* OptionCell.xib in Resources */,
+				8566B6CB22E51B1800445249 /* AccountViewController.xib in Resources */,
 				855B3FFD229A182F0019E42D /* Assets.xcassets in Resources */,
 				858DA2EC22BB435E00693082 /* ProductsCell.xib in Resources */,
 				855B403A229B42D50019E42D /* IQKeyboardManager.bundle in Resources */,
@@ -522,6 +532,7 @@
 				855B4041229B42D50019E42D /* IQNSArray+Sort.swift in Sources */,
 				858DA2B622BADB3800693082 /* CheckoutViewController.swift in Sources */,
 				855B4015229B31000019E42D /* SignUpViewController.swift in Sources */,
+				8566B6C722E513E200445249 /* MasterTabBarController.swift in Sources */,
 				8566B6B922E3C6DA00445249 /* ProductViewModel.swift in Sources */,
 				8551239122A265E9008F1BA5 /* PButton.swift in Sources */,
 				851DD9C6229E4B4600431C19 /* UIView+Animation.swift in Sources */,
@@ -559,6 +570,7 @@
 				8566B6BB22E3C8C700445249 /* Category.swift in Sources */,
 				855B4033229B42D50019E42D /* IQTitleBarButtonItem.swift in Sources */,
 				85B313CE22C9D02700DF8CB8 /* Product.swift in Sources */,
+				8566B6CA22E51B1800445249 /* AccountViewController.swift in Sources */,
 				8551239922A352A9008F1BA5 /* DrawerViewLauncher.swift in Sources */,
 				855123A522A46B3D008F1BA5 /* PViewController.swift in Sources */,
 				858DA2B922BADBBA00693082 /* CartCell.swift in Sources */,

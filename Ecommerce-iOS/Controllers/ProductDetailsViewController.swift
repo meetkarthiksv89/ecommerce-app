@@ -27,6 +27,7 @@ class ProductDetailsViewController: UIViewController {
     }
     
     func configureUI() {
+        tabBarController?.tabBar.isHidden = true
         productImage.image = UIImage(named: product?.imageFileName ?? "GA")
         productTitle.text = product?.title
         price.text = product?.price.priceString
@@ -40,18 +41,3 @@ class ProductDetailsViewController: UIViewController {
     }
     
 }
-
-//extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartOptionCellId", for: indexPath) as! CartCell
-//        return cell
-//    }
-
-//}

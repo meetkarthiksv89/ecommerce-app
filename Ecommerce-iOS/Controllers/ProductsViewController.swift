@@ -41,6 +41,10 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         print(productViewModel.products!)
       
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
 
    let optionsLauncher = ProductOptionsLauncher()
     
@@ -134,18 +138,6 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productViewModel.categories.count
     }
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-////        var width = self.view.frame.size.width - 40
-////        width = width - (width/5)
-//        return CGSize(width: self.view.frame.width, height: 350)
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
