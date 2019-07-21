@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductCellDelegate {
-    func didSelect()
+    func didSelect(product: Product)
 }
 
 class ProductsCell: UICollectionViewCell {
@@ -62,7 +62,9 @@ extension ProductsCell: UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelect()
+        if let delegate = self.delegate, let category = self.category {
+            delegate.didSelect(product: (category.categoryProducts[indexPath.item]))
+        }
     }
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: 200, height: 350)

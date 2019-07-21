@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 
 class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-
-    
-    
     
     let blackView = UIView()
     
@@ -58,18 +55,19 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    func showOptionsDrawView() {
+    func showOptionsDrawView(withOptions: [Option]) {
         
         if let window = UIApplication.shared.keyWindow {
             
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleOptionsDismiss)))
             
-//            blackView.layer.cornerRadius = 20;
-//            blackView.layer.masksToBounds = true;
+            //            blackView.layer.cornerRadius = 20;
+            //            blackView.layer.masksToBounds = true;
             
             window.addSubview(blackView)
             window.addSubview(optionsDrawerView)
+            optionsDrawerView.options = withOptions
             
             let height: CGFloat = 320
             let y = window.frame.height - height
@@ -113,42 +111,58 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return optionsDrawerView.options!.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if collectionView == optionsDrawerView.collectionView {
-            if indexPath.item == 1 {
-                return collectionView.dequeueReusableCell(withReuseIdentifier: quantityCellID, for: indexPath)
-                
-            }
-            else {
-               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-               return cell
+        if indexPath.item == optionsDrawerView.options!.count {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: quantityCellID, for: indexPath) as? QuantityCell {
+                return cell
             }
         }
-        
         else {
-         return collectionView.dequeueReusableCell(withReuseIdentifier: cartOptionCellId, for: indexPath)
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? OptionCell, let options = optionsDrawerView.options {
+                cell.option = options[indexPath.item]
+                return cell
+            }
         }
+
+        
+        return UICollectionViewCell()
+        
+        //        if collectionView == optionsDrawerView.collectionView {
+        //            if indexPath.item == 1 {
+        //                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: quantityCellID, for: indexPath) as? QuantityCell {
+        //                    return cell
+        //                }
+        //            }
+        //            else {
+        //                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! OptionCell
+        //               return cell
+        //            }
+        //        }
+        //
+        //        else {
+        //         return collectionView.dequeueReusableCell(withReuseIdentifier: cartOptionCellId, for: indexPath)
+        //        }
         
         
         
-     
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == optionsDrawerView.collectionView{
-             return CGSize(width: collectionView.frame.width, height: 50)
+            return CGSize(width: collectionView.frame.width, height: 50)
         }
         else{
-             return CGSize(width: collectionView.frame.width, height: 80)
+            return CGSize(width: collectionView.frame.width, height: 80)
         }
-       
+        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 5
     }
     
     override init() {
@@ -166,7 +180,7 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
         let optionsNib = UINib(nibName: "OptionCell", bundle: nil)
         
         optionsDrawerView.collectionView.register(optionsNib, forCellWithReuseIdentifier: cellId)
-       
+        
         
         
         let quantityNib = UINib(nibName: "QuantityCell", bundle: nil)

@@ -12,6 +12,7 @@ import ViewAnimator
 
 class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate{
     
+    
     var products: [Product] = []
     
     func checkoutButtonClicked() {
@@ -20,7 +21,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     }
     
     func addToCartDidSelect() {
-        optionsLauncher.showOptionsDrawView()
+        //optionsLauncher.showOptionsDrawView()
     }
     
 
@@ -40,8 +41,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         print(productViewModel.products!)
       
     }
-    
-    
+
    let optionsLauncher = ProductOptionsLauncher()
     
     @IBAction func cartButtonTapped(_ sender: Any) {
@@ -115,6 +115,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         switch indexPath.item {
         case 0:
             productCell.category = productViewModel.getCategory(name: .Coffee)
+            
         case 1:
             productCell.category = productViewModel.getCategory(name: .Tea)
         case 2:
@@ -154,11 +155,15 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         return productCell
     }
 
-    func didSelect() {
-        navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
+    func didSelect(product: Product) {
+        let productDetailViewController = ProductDetailsViewController()
+         productDetailViewController.product = product
+        navigationController?.pushViewController(productDetailViewController, animated: true)
+       
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        optionsLauncher.showOptionsDrawView()
+        //optionsLauncher.showOptionsDrawView()
     }
 }

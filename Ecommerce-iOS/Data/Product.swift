@@ -16,10 +16,25 @@ struct Product: Decodable {
     let price: String
     let category: String
     let imageFileName: String
+    let options: [Option]
+    let variations: [Variation]
     
     enum DecodingError: Error {
         case missingFile
     }
+}
+
+struct Option: Decodable {
+    let product_id: String
+    let name: String
+    let position: Int
+    let values: [String]
+}
+
+struct Variation: Decodable {
+    let product_id: String
+    let title: String
+    let price: String
 }
 
 

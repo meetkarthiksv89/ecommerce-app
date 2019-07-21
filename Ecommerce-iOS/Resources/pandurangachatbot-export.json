@@ -22,7 +22,27 @@
             },
             "quantity" : "quantity-kilo-500g"
         },
-        "variations" : [ null, "packet-weight" ],
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Coffee Type",
+                "position": 1,
+                "values":["Pure Coffee","With 15% Chicory", "Roasted Beans", "Raw green beans"]
+            },
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["500g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
         "category":"coffee",
         "imageFileName" : "GA"
     },
@@ -41,6 +61,27 @@
             },
             "quantity" : "quantity-kilo-500g"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Coffee Type",
+                "position": 1,
+                "values":["With 30% Chicory"]
+            },
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["500g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
          "category":"coffee",
          "imageFileName" : "AG"
     },
@@ -70,6 +111,27 @@
             },
             "quantity" : "quantity-kilo"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Coffee Type",
+                "position": 1,
+                "values":["With 15% Chicory"]
+            },
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["500g", "250g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
          "category":"coffee",
          "imageFileName" : "BG"
     },
@@ -88,6 +150,27 @@
             },
             "quantity" : "quantity-kilo"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Coffee Type",
+                "position": 1,
+                "values":["With 30% Chicory"]
+            },
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["500g","250g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
          "category":"coffee",
          "imageFileName" : "FB"
     },
@@ -106,6 +189,21 @@
             },
             "quantity" : "quantity-kilo"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["500g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
         "category":"tea",
         "imageFileName" : "DT"
     },
@@ -124,6 +222,21 @@
             },
             "quantity" : "quantity-kilo"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["250g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
          "category":"tea",
          "imageFileName" : "GT"
     },
@@ -143,6 +256,21 @@
             },
             "quantity" : "quantity-packet-100g"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["100g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
         "category":"spices",
         "imageFileName" : "CA"
     },
@@ -161,6 +289,21 @@
             },
             "quantity" : "quantity-packet-200g"
         },
+        "options":[
+            {
+                "product_id": "PCWCOF001",
+                "name": "Packet Weight",
+                "position": 2,
+                "values":["200g"]
+            }
+        ],
+        "variations":[
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Pure Coffee / 500g",
+                "price" : "580"
+            }
+        ],
         "category":"spices",
         "imageFileName" : "PE"
     }
