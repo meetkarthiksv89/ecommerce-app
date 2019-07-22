@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-Mm-RfC">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grand_aroma" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-AI-ybA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AG" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-AI-ybA">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                             </imageView>
                         </subviews>
@@ -80,12 +80,15 @@
             <size key="customSize" width="200" height="266"/>
             <connections>
                 <outlet property="imageBackground" destination="fxT-Mm-RfC" id="t36-Ee-bLl"/>
+                <outlet property="productImage" destination="hjo-AI-ybA" id="pnm-PP-Mp9"/>
+                <outlet property="productName" destination="cU8-Li-IP0" id="bJO-Lg-ffz"/>
+                <outlet property="productPrice" destination="nVa-97-Ixb" id="RmQ-yn-0YV"/>
             </connections>
             <point key="canvasLocation" x="-169.56521739130437" y="105.80357142857143"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="grand_aroma" width="800" height="800"/>
+        <image name="AG" width="800" height="800"/>
         <image name="plus_button" width="50" height="55"/>
     </resources>
 </document>

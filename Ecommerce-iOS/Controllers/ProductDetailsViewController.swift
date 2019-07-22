@@ -12,50 +12,32 @@ class ProductDetailsViewController: UIViewController {
 
     @IBOutlet weak var contentScrollView: UIScrollView!
     @IBOutlet weak var optionsCollectionView: UICollectionView!
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productTitle: UILabel!
+    @IBOutlet weak var productDescription: UITextView!
+    @IBOutlet weak var price: UILabel!
+    
+    
+    var product: Product?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nibCell = UINib(nibName: "CartCell", bundle: nil)
-        optionsCollectionView.register(nibCell, forCellWithReuseIdentifier: "CartOptionCellId")
-        optionsCollectionView.delegate = self
-        optionsCollectionView.dataSource = self
-        let layout = optionsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.estimatedItemSize = CGSize(width: self.view.frame.width, height: 80)
-        
-        
-
+        configureUI()
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func configureUI() {
+        tabBarController?.tabBar.isHidden = true
+        productImage.image = UIImage(named: product?.imageFileName ?? "GA")
+        productTitle.text = product?.title
+        price.text = product?.price.priceString
+        productDescription.text = product?.description
     }
-    */
+
     let optionsLauncher = ProductOptionsLauncher()
     @IBAction func addToCartTapped(_ sender: Any) {
         
-        optionsLauncher.showOptionsDrawView()
+        optionsLauncher.showOptionsDrawView(withOptions: product!.options)
     }
-    
-}
-
-extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartOptionCellId", for: indexPath) as! CartCell
-        return cell
-    }
-   
     
 }

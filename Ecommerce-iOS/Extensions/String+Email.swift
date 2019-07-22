@@ -31,4 +31,8 @@ extension String {
             }
         
     }
+    
+    var priceString: String {
+        return "₹" + self
+    }
 }

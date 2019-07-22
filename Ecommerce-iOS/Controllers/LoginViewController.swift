@@ -19,6 +19,10 @@ class LoginViewController: UIViewController{
         drawView()
     }
     
+    func hideBackButton () {
+        loginView.navBar.backButton.isHidden = true
+    }
+    
     func drawView(){
 
         loginView.delegate = self
@@ -54,11 +58,8 @@ class LoginViewController: UIViewController{
                 return
             }
             
-            guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
-            guard let controller = navController.viewControllers[0] as? ProductsViewController else { return }
-            controller.configureViewComponents()
-            
-
+            guard let navController = UIApplication.shared.keyWindow?.rootViewController as? MasterTabBarController else { return }
+            navController.setupTabBar()
             self.dismiss(animated: true, completion: nil)
         }
         

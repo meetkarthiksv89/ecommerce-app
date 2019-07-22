@@ -10,6 +10,12 @@ import UIKit
 
 class ProductOptionsDrawerView: DrawerView {
     
+    var options: [Option]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     let chooseOptionsLabel: UILabel = {
         let label = UILabel()
         label.text = "Choose Options"
@@ -38,9 +44,6 @@ class ProductOptionsDrawerView: DrawerView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-      
-       
-        
         headerView.addSubview(chooseOptionsLabel)
         footerView.addSubview(priceLabel)
         footerView.addSubview(cartButton)
