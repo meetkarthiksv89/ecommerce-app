@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class MasterTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabBar()
+        authenticateUserAndConfigureView()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func authenticateUserAndConfigureView() {
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                let navController = UINavigationController(rootViewController: StartUpViewController())
+                navController.navigationBar.barStyle = .black
+                self.present(navController, animated: true, completion: nil)
+            }
+        } else {
+            setupTabBar()
+        }
     }
     
     func setupTabBar() {

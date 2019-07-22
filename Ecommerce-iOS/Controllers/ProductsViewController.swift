@@ -34,8 +34,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         
         navigationController?.navigationBar.isHidden = true
         optionsLauncher.cartDrawerView.cartDelegate = self
-        //signOut()
-        authenticateUserAndConfigureView()
+        configureViewComponents()
         
         
         print(productViewModel.products!)
@@ -51,32 +50,6 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     @IBAction func cartButtonTapped(_ sender: Any) {
         optionsLauncher.showCartDrawView()
         
-    }
-    
-    func signOut() {
-        do {
-            try Auth.auth().signOut()
-            let navController = UINavigationController(rootViewController: StartUpViewController())
-            navController.navigationBar.barStyle = .black
-            self.present(navController, animated: true, completion: nil)
-        } catch let error {
-            print("Failed to sign out with error..", error)
-        }
-    }
-    
-//    @IBAction func testSignOut(_ sender: Any) {
-//        signOut()
-//    }
-    func authenticateUserAndConfigureView() {
-        if Auth.auth().currentUser == nil {
-            DispatchQueue.main.async {
-                let navController = UINavigationController(rootViewController: StartUpViewController())
-                navController.navigationBar.barStyle = .black
-                self.present(navController, animated: true, completion: nil)
-            }
-        } else {
-            configureViewComponents()
-        }
     }
     
     func configureViewComponents() {
