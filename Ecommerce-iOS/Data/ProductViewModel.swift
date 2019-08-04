@@ -65,4 +65,9 @@ class ProductViewModel {
         }
         return nil
     }
+    
+    func getProductVariation(id: String, title: String)  -> Variation? {
+        let product = products?.filter({ $0.id == id }).first
+        return (product?.variations.filter({ $0.title == title }).first)!
+    }
 }

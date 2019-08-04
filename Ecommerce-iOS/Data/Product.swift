@@ -29,6 +29,7 @@ struct Option: Decodable {
     let name: String
     let position: Int
     let values: [String]
+    var selectedValue: String?
 }
 
 struct Variation: Decodable {

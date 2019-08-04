@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-Xi-tOc">
-                        <rect key="frame" x="20" y="39.5" width="75.5" height="19.5"/>
+                        <rect key="frame" x="15" y="39.5" width="75.5" height="19.5"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ySv-AJ-qDc" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
-                        <rect key="frame" x="389.5" y="37.5" width="126.5" height="23.5"/>
+                        <rect key="frame" x="394.5" y="37.5" width="126.5" height="23.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Chicory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-sV-iqZ">
                                 <rect key="frame" x="0.0" y="0.0" width="99.5" height="23.5"/>
@@ -50,8 +50,8 @@
             <color key="backgroundColor" red="0.95294117649999999" green="0.90588235289999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ySv-AJ-qDc" firstAttribute="centerY" secondItem="DWc-5R-Kho" secondAttribute="centerY" id="P5H-Dx-9vd"/>
-                <constraint firstItem="JHc-Xi-tOc" firstAttribute="leading" secondItem="DWc-5R-Kho" secondAttribute="leading" constant="20" id="gQ2-49-FeZ"/>
-                <constraint firstAttribute="trailing" secondItem="ySv-AJ-qDc" secondAttribute="trailing" constant="20" id="nDo-XX-sOS"/>
+                <constraint firstItem="JHc-Xi-tOc" firstAttribute="leading" secondItem="DWc-5R-Kho" secondAttribute="leading" constant="15" id="gQ2-49-FeZ"/>
+                <constraint firstAttribute="trailing" secondItem="ySv-AJ-qDc" secondAttribute="trailing" constant="15" id="nDo-XX-sOS"/>
                 <constraint firstItem="ySv-AJ-qDc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JHc-Xi-tOc" secondAttribute="trailing" constant="20" id="oCN-41-lPf"/>
                 <constraint firstItem="JHc-Xi-tOc" firstAttribute="centerY" secondItem="ySv-AJ-qDc" secondAttribute="centerY" id="spx-Z3-aro"/>
             </constraints>

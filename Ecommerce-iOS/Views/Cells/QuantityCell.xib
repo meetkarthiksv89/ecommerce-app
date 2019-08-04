@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh4-gb-qrm">
-                        <rect key="frame" x="20" y="39.5" width="54" height="19.5"/>
+                        <rect key="frame" x="15" y="39.5" width="54" height="19.5"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-Sd-zg9" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
-                        <rect key="frame" x="395" y="35.5" width="121" height="27"/>
+                        <rect key="frame" x="400" y="35.5" width="121" height="27"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-Xs-KUE">
                                 <rect key="frame" x="0.0" y="0.0" width="25" height="27"/>
@@ -52,8 +52,8 @@
             <constraints>
                 <constraint firstItem="3Kh-Sd-zg9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vh4-gb-qrm" secondAttribute="trailing" constant="20" id="11B-YU-cbD"/>
                 <constraint firstItem="Vh4-gb-qrm" firstAttribute="centerY" secondItem="3Kh-Sd-zg9" secondAttribute="centerY" id="66g-M5-2vk"/>
-                <constraint firstAttribute="trailing" secondItem="3Kh-Sd-zg9" secondAttribute="trailing" constant="20" id="MFX-vr-3NS"/>
-                <constraint firstItem="Vh4-gb-qrm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Ojd-Ns-Axx"/>
+                <constraint firstAttribute="trailing" secondItem="3Kh-Sd-zg9" secondAttribute="trailing" constant="15" id="MFX-vr-3NS"/>
+                <constraint firstItem="Vh4-gb-qrm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Ojd-Ns-Axx"/>
                 <constraint firstItem="3Kh-Sd-zg9" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="XC3-6W-TBv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -61,7 +61,7 @@
             <connections>
                 <outlet property="quantitylabel" destination="Vh4-gb-qrm" id="4qD-x0-OQW"/>
             </connections>
-            <point key="canvasLocation" x="230.43478260869566" y="81.696428571428569"/>
+            <point key="canvasLocation" x="118.84057971014494" y="81.696428571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

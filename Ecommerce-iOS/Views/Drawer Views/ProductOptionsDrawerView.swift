@@ -16,7 +16,7 @@ class ProductOptionsDrawerView: DrawerView {
         }
     }
     
-    let chooseOptionsLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Choose Options"
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +44,7 @@ class ProductOptionsDrawerView: DrawerView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        headerView.addSubview(chooseOptionsLabel)
+        headerView.addSubview(titleLabel)
         footerView.addSubview(priceLabel)
         footerView.addSubview(cartButton)
         addViewConstraints()
@@ -52,12 +52,12 @@ class ProductOptionsDrawerView: DrawerView {
     
     func addViewConstraints() {
         let views: [String: Any] = [
-            "chooseOptionsLabel":chooseOptionsLabel,
+            "chooseOptionsLabel":titleLabel,
             "priceLabel":priceLabel,
             "cartButton":cartButton,
         ]
         
-        addConstraint(NSLayoutConstraint(item: chooseOptionsLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
         
         var allConstraints: [NSLayoutConstraint] = []
         

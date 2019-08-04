@@ -14,12 +14,6 @@ class OptionCell: UICollectionViewCell {
     @IBOutlet weak var optionValue: UILabel!
     @IBOutlet weak var optionSelectorBtn: UIButton!
     
-    var option: Option? {
-        didSet{
-            updateUI()
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.brandCream
@@ -29,12 +23,5 @@ class OptionCell: UICollectionViewCell {
     
     @IBAction func optionSelectorTapped(_ sender: Any) {
         
-    }
-    
-    func updateUI() {
-        if let option = option {
-            optionTitle.text = option.name
-            optionValue.text = option.values[0]
-        }
     }
 }

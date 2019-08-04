@@ -122,10 +122,10 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
             }
         }
         else {
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? OptionCell, let options = optionsDrawerView.options {
-                cell.option = options[indexPath.item]
-                return cell
-            }
+//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? OptionCell, let options = options {
+//                cell.option = options[indexPath.item]
+//                return cell
+//            }
         }
 
         
@@ -163,6 +163,14 @@ class ProductOptionsLauncher: NSObject, UICollectionViewDelegate, UICollectionVi
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.optionsDrawerView.collectionView.alpha = 0
+            
+//            self.optionsDrawerView.frame = CGRect(x: 0, y: y, width: self.optionsDrawerView.frame.width, height: self.optionsDrawerView.frame.height)
+        }, completion: nil)
     }
     
     override init() {

@@ -11,17 +11,6 @@
         "product_url" : "https://www.pandurangacoffee.com/product-page/grand-aroma-coffee",
         "subtitle" : "AA Plantation Coffee with 15% Chicory Or Pure Coffee",
         "title" : "Grand Aroma",
-        "variation" : {
-            "coffee-type" : {
-                "message" : "Do you prefer Pure Coffee or Coffee with Chicory?",
-                "options" : [ "Pure Coffee", "With Chicory" ]
-            },
-            "packet-weight" : {
-                "message" : "What packet weight would you prefer?",
-                "options" : [ "500g" ]
-            },
-            "quantity" : "quantity-kilo-500g"
-        },
         "options":[
             {
                 "product_id": "PCWCOF001",
@@ -39,7 +28,22 @@
         "variations":[
             {
                 "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "title" : "Pure Coffee/500g",
+                "price" : "580"
+            },
+            {
+                "product_id": "PCWCOF001",
+                "title" : "With 15% Chicory/500g",
+                "price" : "500"
+            },
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Raw green beans/500g",
+                "price" : "580"
+            },
+            {
+                "product_id": "PCWCOF001",
+                "title" : "Roasted Beans/500g",
                 "price" : "580"
             }
         ],
@@ -54,13 +58,6 @@
         "product_url" : "https://www.pandurangacoffee.com/product-page/aroma-gold-coffee",
         "subtitle" : "70% Coffee(AA Plantation) + 30% Chicory",
         "title" : "Aroma Gold",
-        "variation" : {
-            "packet-weight" : {
-                "message" : "Please choose your packet weight",
-                "options" : [ "500g" ]
-            },
-            "quantity" : "quantity-kilo-500g"
-        },
         "options":[
             {
                 "product_id": "PCWCOF001",
@@ -77,8 +74,8 @@
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWCOF002",
+                "title" : "With 30% Chicory/500g",
                 "price" : "580"
             }
         ],
@@ -100,26 +97,15 @@
         "product_url" : "https://www.pandurangacoffee.com/product-page/brown-gold-coffee",
         "subtitle" : "With 15% Chicory Or Pure Coffee",
         "title" : "Brown Gold",
-        "variation" : {
-            "coffee-type" : {
-                "message" : "Do you prefer Pure Coffee or Coffee with Chicory?",
-                "options" : [ "Pure Coffee", "With Chicory" ]
-            },
-            "packet-weight" : {
-                "message" : "Please choose your packet weight",
-                "options" : [ "500g", "250g" ]
-            },
-            "quantity" : "quantity-kilo"
-        },
         "options":[
             {
-                "product_id": "PCWCOF001",
+                "product_id": "PCWCOF003",
                 "name": "Coffee Type",
                 "position": 1,
                 "values":["With 15% Chicory"]
             },
             {
-                "product_id": "PCWCOF001",
+                "product_id": "PCWCOF003",
                 "name": "Packet Weight",
                 "position": 2,
                 "values":["500g", "250g"]
@@ -127,8 +113,13 @@
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWCOF003",
+                "title" : "With 15% Chicory/ 500g",
+                "price" : "580"
+            },
+            {
+                "product_id": "PCWCOF003",
+                "title" : "With 15% Chicory/250g",
                 "price" : "580"
             }
         ],
@@ -152,13 +143,13 @@
         },
         "options":[
             {
-                "product_id": "PCWCOF001",
+                "product_id": "PCWCOF004",
                 "name": "Coffee Type",
                 "position": 1,
                 "values":["With 30% Chicory"]
             },
             {
-                "product_id": "PCWCOF001",
+                "product_id": "PCWCOF004",
                 "name": "Packet Weight",
                 "position": 2,
                 "values":["500g","250g"]
@@ -166,8 +157,13 @@
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWCOF004",
+                "title" : "With 15% Chicory/ 500g",
+                "price" : "580"
+            },
+            {
+                "product_id": "PCWCOF004",
+                "title" : "With 15% Chicory/250g",
                 "price" : "580"
             }
         ],
@@ -191,16 +187,21 @@
         },
         "options":[
             {
-                "product_id": "PCWCOF001",
+                "product_id": "PCWTEA001",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["500g"]
+                "values":["500g","250g"]
             }
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWTEA001",
+                "title" : "500g",
+                "price" : "580"
+            },
+            {
+                "product_id": "PCWTEA001",
+                "title" : "250g",
                 "price" : "580"
             }
         ],
@@ -215,13 +216,6 @@
         "product_url" : "https://www.pandurangacoffee.com/product-page/green-tea",
         "subtitle" : "Assam",
         "title" : "Green Tea",
-        "variation" : {
-            "packet-weight" : {
-                "message" : "Please choose your grind quantity",
-                "options" : [ "250g" ]
-            },
-            "quantity" : "quantity-kilo"
-        },
         "options":[
             {
                 "product_id": "PCWCOF001",
@@ -232,8 +226,8 @@
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWTEA002",
+                "title" : "250g",
                 "price" : "580"
             }
         ],
@@ -249,13 +243,6 @@
         "quantity" : "quantity-packet-100g",
         "subtitle" : "Extrabold Cardamom",
         "title" : "Cardamom",
-        "variation" : {
-            "packet-weight" : {
-                "message" : "Please choose your packet weight",
-                "options" : [ "100g" ]
-            },
-            "quantity" : "quantity-packet-100g"
-        },
         "options":[
             {
                 "product_id": "PCWCOF001",
@@ -266,8 +253,8 @@
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWSPI001",
+                "title" : "100g",
                 "price" : "580"
             }
         ],
@@ -291,7 +278,7 @@
         },
         "options":[
             {
-                "product_id": "PCWCOF001",
+                "product_id": "PCWSPI002",
                 "name": "Packet Weight",
                 "position": 2,
                 "values":["200g"]
@@ -299,8 +286,8 @@
         ],
         "variations":[
             {
-                "product_id": "PCWCOF001",
-                "title" : "Pure Coffee / 500g",
+                "product_id": "PCWSPI002",
+                "title" : "200g",
                 "price" : "580"
             }
         ],

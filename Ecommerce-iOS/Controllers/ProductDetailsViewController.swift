@@ -34,10 +34,11 @@ class ProductDetailsViewController: UIViewController {
         productDescription.text = product?.description
     }
 
-    let optionsLauncher = ProductOptionsLauncher()
+    let optionsLauncher = OptionsLauncher()
     @IBAction func addToCartTapped(_ sender: Any) {
-        
-        optionsLauncher.showOptionsDrawView(withOptions: product!.options)
+        if let product = product {
+            optionsLauncher.showOptionsDrawView(withOptions: product.options)
+        }
     }
     
 }

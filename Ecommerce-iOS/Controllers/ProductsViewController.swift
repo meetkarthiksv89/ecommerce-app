@@ -31,7 +31,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        productViewModel.getProductVariation(id: "PCWCOF001", title: "Pure Coffee/500g")
         navigationController?.navigationBar.isHidden = true
         optionsLauncher.cartDrawerView.cartDelegate = self
         configureViewComponents()
