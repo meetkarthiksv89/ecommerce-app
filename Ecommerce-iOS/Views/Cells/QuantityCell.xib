@@ -28,11 +28,14 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-Sd-zg9" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
                         <rect key="frame" x="400" y="35.5" width="121" height="27"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-Xs-KUE">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-Xs-KUE">
                                 <rect key="frame" x="0.0" y="0.0" width="25" height="27"/>
                                 <state key="normal" image="increment_icon"/>
+                                <connections>
+                                    <action selector="quantityChanged:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wa3-NL-O4U"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Kilos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-rv-p4x">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Kilos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-rv-p4x">
                                 <rect key="frame" x="35" y="2" width="51" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -43,6 +46,9 @@
                                 <state key="normal" image="decrement_icon">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="quantityChanged:" destination="gTV-IL-0wX" eventType="touchUpInside" id="edP-Rx-UjN"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
@@ -59,6 +65,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="536" height="98"/>
             <connections>
+                <outlet property="quantity" destination="bmz-rv-p4x" id="2MD-19-3q3"/>
                 <outlet property="quantitylabel" destination="Vh4-gb-qrm" id="4qD-x0-OQW"/>
             </connections>
             <point key="canvasLocation" x="118.84057971014494" y="81.696428571428569"/>

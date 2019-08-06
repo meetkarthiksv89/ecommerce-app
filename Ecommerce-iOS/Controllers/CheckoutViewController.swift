@@ -48,7 +48,7 @@ class CheckoutViewController: PViewController, CartDelegate {
         addUserInfo()
     }
     
-    let cartLauncher = ProductOptionsLauncher()
+    let cartLauncher = CartLauncher()
     let addressInfo = AddressInfo(addressLine1: "20 Poncetta Dr", addressLine2: "Apt 309", city: "Daly City", state: "California", zipcode: "577101")
     
     @objc func cartButtonTapped() {

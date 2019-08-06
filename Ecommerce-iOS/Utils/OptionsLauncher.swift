@@ -15,13 +15,17 @@ class OptionsLauncher: NSObject {
     let blackView = UIView()
     let optionsDrawerView = ProductOptionsDrawerView(frame: .zero)
     
+    
+    
     let optionsCellId = "OptionCellId"
     let quantityCellID = "quantityCellID"
     let optionValuesCellId = "OptionsValuesCellId"
     
-    
+    var product: Product?
+    var productID: String?
     /// Variable to know the selected option type
     var selectedIndex: IndexPath?
+    var selectedVariant: Variation?
     
     var insideOptionValues: Bool = false
     
@@ -43,6 +47,22 @@ class OptionsLauncher: NSObject {
         let valuesNib = UINib(nibName: "ValuesCell", bundle: nil)
         
         optionsDrawerView.collectionView.register(valuesNib, forCellWithReuseIdentifier: optionValuesCellId)
+        
+        optionsDrawerView.cartButton.addTarget(self, action: #selector(cartButtonTapped), for: .touchUpInside)
+    }
+    let cartLauncher = CartLauncher()
+    @objc func cartButtonTapped() {
+        
+        if let selectedVariant = selectedVariant, let product = product {
+            if let cell = optionsDrawerView.collectionView.cellForItem(at: IndexPath(item: options!.count, section: 0)) as? QuantityCell{
+                 CartManager.shared.addProductToCart(product: product, selectedVariant: selectedVariant, quantity: cell.productQuantity)
+                
+                handleOptionsDismiss()
+                cartLauncher.showCartDrawView()
+            }
+           
+        }
+        
     }
     
     
@@ -50,19 +70,23 @@ class OptionsLauncher: NSObject {
     /// Show draw
     ///
     /// - Parameter withOptions: <#withOptions description#>
-    func showOptionsDrawView(withOptions: [Option]) {
+    func showOptionsDrawView(forProduct product: Product) {
         
-        options = withOptions
+        self.product = product
+        productID = product.id
+        self.options = product.options
+        
+        optionsDrawerView.priceLabel.text = product.price.priceString
         if let window = UIApplication.shared.keyWindow {
             
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleOptionsDismiss)))
-        
+            
             
             window.addSubview(blackView)
             window.addSubview(optionsDrawerView)
             
-            optionsDrawerView.options = withOptions
+            optionsDrawerView.options = options
             
             let height: CGFloat = 320
             let y = window.frame.height - height
@@ -71,14 +95,26 @@ class OptionsLauncher: NSObject {
             
             blackView.frame = window.frame
             blackView.alpha = 0
-            
+            self.optionsDrawerView.priceLabel.alpha = 0
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                
                 self.blackView.alpha = 1
                 
                 self.optionsDrawerView.frame = CGRect(x: 0, y: y, width: self.optionsDrawerView.frame.width, height: self.optionsDrawerView.frame.height)
-            }, completion: nil)
+                
+            }, completion: { a in
+                self.updatePrice()
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                    
+                    self.optionsDrawerView.priceLabel.alpha = 1
+                    
+                }, completion: nil)
+                
+            })
             
         }
+        
+        
         
     }
     
@@ -90,10 +126,38 @@ class OptionsLauncher: NSObject {
             if let window = UIApplication.shared.keyWindow {
                 self.optionsDrawerView.frame = CGRect(x: 0, y: window.frame.height, width: self.optionsDrawerView.frame.width, height: self.optionsDrawerView.frame.height)
             }
-        }, completion: nil)
+        }, completion: { a in
+           
+        })
     }
     
     func updatePrice() {
+        
+        var selectedOptionsValues = [String]()
+        
+        if let options = options {
+            for option in options {
+                selectedOptionsValues.append((option.selectedValue != nil) ? option.selectedValue! : option.values[0])
+            }
+        }
+        
+        let title = selectedOptionsValues.joined(separator: "/")
+        let variant = ProductViewModel.shared.getProductVariation(id: productID!, title: title)
+        selectedVariant = variant
+        
+        if let cell = optionsDrawerView.collectionView.cellForItem(at: IndexPath(item: options!.count , section: 0)) as? QuantityCell, let variant = variant{
+            
+            let price = cell.productQuantity * Int(variant.price)!
+            
+            
+            let formatter = NumberFormatter()              // Cache this, NumberFormatter creation is expensive.
+            formatter.locale = Locale(identifier: "en_IN") // Here indian locale with english language is used
+            formatter.numberStyle = .decimal               // Change to `.currency` if needed
+            
+            // price = formatter.string(from: NSNumber(value: price))
+            optionsDrawerView.priceLabel.text = formatter.string(from: NSNumber(value: price))?.priceString
+        }
+        
         
     }
     
@@ -132,6 +196,9 @@ extension OptionsLauncher:  UICollectionViewDelegate, UICollectionViewDataSource
         
         if indexPath.item == optionsDrawerView.options!.count {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: quantityCellID, for: indexPath) as? QuantityCell {
+                cell.delegate = self
+                cell.unit = product!.minimumQuantityUnit
+                cell.updateUI()
                 return cell
             }
         }
@@ -165,17 +232,20 @@ extension OptionsLauncher:  UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
-        
+        if !insideOptionValues && indexPath.item == options!.count {
+            return
+        }
         // If not in inside option value, set the selected index value to reference the values later.
         if !insideOptionValues {
             selectedIndex = indexPath
+            
         }
             
         else {
             //TODO : Safe unwrapping
             if let selectedIndex = selectedIndex {
                 options![selectedIndex.item].selectedValue = options![selectedIndex.item].values[indexPath.item]
+                
             }
         }
         
@@ -184,10 +254,9 @@ extension OptionsLauncher:  UICollectionViewDelegate, UICollectionViewDataSource
             self.optionsDrawerView.collectionView.alpha = 0
         }) { (a) in
             self.optionsDrawerView.collectionView.reloadData()
-            self.updatePrice()
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveLinear, animations: {
                 
-                 if !self.insideOptionValues {
+                if !self.insideOptionValues {
                     self.optionsDrawerView.titleLabel.text = "Choose Options"
                     
                 }
@@ -200,15 +269,17 @@ extension OptionsLauncher:  UICollectionViewDelegate, UICollectionViewDataSource
                 self.optionsDrawerView.collectionView.alpha = 1
                 self.optionsDrawerView.titleLabel.alpha = 1
             }, completion: { a in
-                
+                self.updatePrice()
             })
             
         }
         
         self.insideOptionValues = !self.insideOptionValues
-        
-        
     }
-    
-    
+}
+
+extension OptionsLauncher: QuantityDelegate {
+    func quantityUpdated() {
+        updatePrice()
+    }
 }

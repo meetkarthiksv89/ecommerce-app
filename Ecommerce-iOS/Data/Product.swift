@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Product: Decodable {
+struct Product: Decodable, Equatable {
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.id == rhs.id 
+    }
+    
     let id: String
     let title: String
     let subtitle: String
@@ -18,13 +22,14 @@ struct Product: Decodable {
     let imageFileName: String
     let options: [Option]
     let variations: [Variation]
+    let minimumQuantityUnit: String
     
     enum DecodingError: Error {
         case missingFile
     }
 }
 
-struct Option: Decodable {
+struct Option: Decodable, Equatable {
     let product_id: String
     let name: String
     let position: Int
@@ -32,7 +37,7 @@ struct Option: Decodable {
     var selectedValue: String?
 }
 
-struct Variation: Decodable {
+struct Variation: Decodable, Equatable {
     let product_id: String
     let title: String
     let price: String

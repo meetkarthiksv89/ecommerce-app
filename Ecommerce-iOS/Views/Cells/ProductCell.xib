@@ -63,6 +63,9 @@
                                     <constraint firstAttribute="width" constant="30" id="Hng-SX-Sx7"/>
                                 </constraints>
                                 <state key="normal" image="plus_button"/>
+                                <connections>
+                                    <action selector="addToCartTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="lYd-Xx-OAs"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>

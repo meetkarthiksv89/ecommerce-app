@@ -37,7 +37,7 @@ class ProductDetailsViewController: UIViewController {
     let optionsLauncher = OptionsLauncher()
     @IBAction func addToCartTapped(_ sender: Any) {
         if let product = product {
-            optionsLauncher.showOptionsDrawView(withOptions: product.options)
+            optionsLauncher.showOptionsDrawView(forProduct: product)
         }
     }
     

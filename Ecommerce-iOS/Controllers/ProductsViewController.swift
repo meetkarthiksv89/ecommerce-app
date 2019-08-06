@@ -25,19 +25,19 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     }
     
 
-    let productViewModel = ProductViewModel()
+   // let productViewModel = ProductViewModel()
     @IBOutlet weak var collectionView: UICollectionView!
     let productCellIdentifier = "ProductCellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        productViewModel.getProductVariation(id: "PCWCOF001", title: "Pure Coffee/500g")
+        //productViewModel.getProductVariation(id: "PCWCOF001", title: "Pure Coffee/500g")
         navigationController?.navigationBar.isHidden = true
         optionsLauncher.cartDrawerView.cartDelegate = self
         configureViewComponents()
         
         
-        print(productViewModel.products!)
+        print(ProductViewModel.shared.products!)
       
     }
     
@@ -45,7 +45,7 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
         tabBarController?.tabBar.isHidden = false
     }
 
-   let optionsLauncher = ProductOptionsLauncher()
+   let optionsLauncher = CartLauncher()
     
     @IBAction func cartButtonTapped(_ sender: Any) {
         optionsLauncher.showCartDrawView()
@@ -91,14 +91,13 @@ class ProductsViewController: UIViewController,ProductCellDelegate, CartDelegate
     fileprivate func assignProductCellCategory(_ indexPath: IndexPath, _ productCell: ProductsCell) {
         switch indexPath.item {
         case 0:
-            productCell.category = productViewModel.getCategory(name: .Coffee)
-            
+            productCell.category = ProductViewModel.shared.getCategory(name: .Coffee)
         case 1:
-            productCell.category = productViewModel.getCategory(name: .Tea)
+            productCell.category = ProductViewModel.shared.getCategory(name: .Tea)
         case 2:
-            productCell.category = productViewModel.getCategory(name: .Spices)
+            productCell.category = ProductViewModel.shared.getCategory(name: .Spices)
         default:
-            productCell.category = productViewModel.getCategory(name: .Tea)
+            productCell.category = ProductViewModel.shared.getCategory(name: .Tea)
         }
     }
 }
@@ -109,7 +108,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productViewModel.categories.count
+        return ProductViewModel.shared.categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

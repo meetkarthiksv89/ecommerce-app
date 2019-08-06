@@ -4,10 +4,6 @@
         "description" : "Grand Aroma was created as a response to grand consumer’s desires for a different, more sophisticated and more urban concept of filter coffee experience. Grand Aroma is an exclusive blend of premium quality roasted and ground coffee made from variety of carefully selected coffee beans grown on the high altitude, sky kissing plantations in India. It is blended with 15% of speciality chicory to give a rich caramel taste and  mouthfeel. For the true connoisseurs, for the beginning of a new day and work, for the admirers of small rituals and for conceptualising great ideas and for maximum delight.",
         "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Grand%20Aroma%20.png?alt=media&token=84566942-8579-4faf-9647-14b30fc76e7e",
         "price" : "500",
-        "prices" : [ {
-            "price" : 580,
-            "variant" : [ "500g", "Pure Coffee" ]
-        } ],
         "product_url" : "https://www.pandurangacoffee.com/product-page/grand-aroma-coffee",
         "subtitle" : "AA Plantation Coffee with 15% Chicory Or Pure Coffee",
         "title" : "Grand Aroma",
@@ -16,45 +12,46 @@
                 "product_id": "PCWCOF001",
                 "name": "Coffee Type",
                 "position": 1,
-                "values":["Pure Coffee","With 15% Chicory", "Roasted Beans", "Raw green beans"]
+                "values":["With 15% Chicory", "Pure Coffee", "Roasted Beans", "Raw green beans"]
             },
             {
                 "product_id": "PCWCOF001",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["500g"]
+                "values":["500 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWCOF001",
-                "title" : "Pure Coffee/500g",
+                "title" : "Pure Coffee/500 grams",
                 "price" : "580"
             },
             {
                 "product_id": "PCWCOF001",
-                "title" : "With 15% Chicory/500g",
+                "title" : "With 15% Chicory/500 grams",
                 "price" : "500"
             },
             {
                 "product_id": "PCWCOF001",
-                "title" : "Raw green beans/500g",
+                "title" : "Raw green beans/500 grams",
                 "price" : "580"
             },
             {
                 "product_id": "PCWCOF001",
-                "title" : "Roasted Beans/500g",
+                "title" : "Roasted Beans/500 grams",
                 "price" : "580"
             }
         ],
         "category":"coffee",
-        "imageFileName" : "GA"
+        "imageFileName" : "GA",
+        "minimumQuantityUnit" : "Kilo"
     },
     {
         "id":"PCWCOF002",
         "description" : "Gold is a blend that enables you to enjoy the full and refined quality flavor of strong filter coffee. Aroma Grand has undergone extensive testing and trials to find the right recipe and blend, producing the coffee from the finest and highest quality coffee beans in compliance with our consumer’s taste. Aroma Gold contains 30% Chicory to give it a creamy caramel finish. With its superb packaging design, quality blend and reasonable price, this product will indisputably find its way to the hearts of true lovers and connoisseurs of filter coffee.",
         "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Aroma%20Gold.png?alt=media&token=e4faac22-34e0-469a-8e86-2b4e4c68b380",
-        "price" : "480",
+        "price" : "440",
         "product_url" : "https://www.pandurangacoffee.com/product-page/aroma-gold-coffee",
         "subtitle" : "70% Coffee(AA Plantation) + 30% Chicory",
         "title" : "Aroma Gold",
@@ -69,31 +66,25 @@
                 "product_id": "PCWCOF001",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["500g"]
+                "values":["500 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWCOF002",
-                "title" : "With 30% Chicory/500g",
-                "price" : "580"
+                "title" : "With 30% Chicory/500 grams",
+                "price" : "440"
             }
         ],
          "category":"coffee",
-         "imageFileName" : "AG"
+         "imageFileName" : "AG",
+         "minimumQuantityUnit" : "Kilo"
     },
     {
         "id":"PCWCOF003",
         "description" : "Brown Gold is an original blend of selected coffee beans made according to special recipe and designed for the ones who enjoy rich foam. It is the best-selling product of Panduranga Coffee and the best-selling coffee brand on the domestic market as well as in the region. In the mind of the consumers, it is positioned as \"the first real coffee after the wild coffee roasting businesses\", which secured the continued loyalty of the consumers through-out the decades.",
         "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Brown%20Gold.png?alt=media&token=0c01e7e2-a283-4c38-bfcb-798193bc9f17",
         "price" : "320",
-        "prices" : [ {
-            "price" : 430,
-            "variant" : [ "500g", "Pure Coffee" ]
-        }, {
-            "price" : 430,
-            "variant" : [ "250g", "Pure Coffee" ]
-        } ],
         "product_url" : "https://www.pandurangacoffee.com/product-page/brown-gold-coffee",
         "subtitle" : "With 15% Chicory Or Pure Coffee",
         "title" : "Brown Gold",
@@ -108,23 +99,24 @@
                 "product_id": "PCWCOF003",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["500g", "250g"]
+                "values":["500 grams", "250 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWCOF003",
-                "title" : "With 15% Chicory/ 500g",
-                "price" : "580"
+                "title" : "With 15% Chicory/500 grams",
+                "price" : "320"
             },
             {
                 "product_id": "PCWCOF003",
-                "title" : "With 15% Chicory/250g",
-                "price" : "580"
+                "title" : "With 15% Chicory/250 grams",
+                "price" : "320"
             }
         ],
          "category":"coffee",
-         "imageFileName" : "BG"
+         "imageFileName" : "BG",
+         "minimumQuantityUnit" : "Kilo"
     },
     {
         "id":"PCWCOF004",
@@ -137,7 +129,7 @@
         "variation" : {
             "packet-weight" : {
                 "message" : "Please choose your grind quantity",
-                "options" : [ "500g", "250g" ]
+                "options" : [ "500 grams", "250 grams" ]
             },
             "quantity" : "quantity-kilo"
         },
@@ -152,23 +144,24 @@
                 "product_id": "PCWCOF004",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["500g","250g"]
+                "values":["500 grams","250 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWCOF004",
-                "title" : "With 15% Chicory/ 500g",
-                "price" : "580"
+                "title" : "With 30% Chicory/500 grams",
+                "price" : "300"
             },
             {
                 "product_id": "PCWCOF004",
-                "title" : "With 15% Chicory/250g",
-                "price" : "580"
+                "title" : "With 30% Chicory/250 grams",
+                "price" : "300"
             }
         ],
          "category":"coffee",
-         "imageFileName" : "FB"
+         "imageFileName" : "FB",
+         "minimumQuantityUnit" : "Kilo"
     },
     {
         "id":"PCWTEA001",
@@ -181,7 +174,7 @@
         "variation" : {
             "packet-weight" : {
                 "message" : "Please choose your packet weight!",
-                "options" : [ "500g", "250g" ]
+                "options" : [ "500 grams", "250 grams" ]
             },
             "quantity" : "quantity-kilo"
         },
@@ -190,29 +183,30 @@
                 "product_id": "PCWTEA001",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["500g","250g"]
+                "values":["500 grams","250 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWTEA001",
-                "title" : "500g",
-                "price" : "580"
+                "title" : "500 grams",
+                "price" : "400"
             },
             {
                 "product_id": "PCWTEA001",
-                "title" : "250g",
-                "price" : "580"
+                "title" : "250 grams",
+                "price" : "400"
             }
         ],
         "category":"tea",
-        "imageFileName" : "DT"
+        "imageFileName" : "DT",
+        "minimumQuantityUnit" : "Kilo"
     },
     {
         "id":"PCWTEA002",
         "description" : "A healthy person’s best friend, Green tea is filled with antioxidants and nutrients. The biggest benefit of green tea is, this healthy beverage contains an antioxidant called Catechin that fights and protect against cell damage, improves brain functions, aides fat loss and lowers cholesterol levels. Green tea is made of unoxidized leaves and less processed compared to other teas and thus contains the most antioxidants. Make a cup for yourself by just adding few leaves into a pan of boiling water, strain the decoction and have it with some honey for pleasant taste.",
         "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Green%20Tea.png?alt=media&token=b7794507-69bf-49aa-afc5-078e86244dc6",
-        "price" : "500",
+        "price" : "250",
         "product_url" : "https://www.pandurangacoffee.com/product-page/green-tea",
         "subtitle" : "Assam",
         "title" : "Green Tea",
@@ -221,18 +215,19 @@
                 "product_id": "PCWCOF001",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["250g"]
+                "values":["250 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWTEA002",
-                "title" : "250g",
-                "price" : "580"
+                "title" : "250 grams",
+                "price" : "250"
             }
         ],
          "category":"tea",
-         "imageFileName" : "GT"
+         "imageFileName" : "GT",
+         "minimumQuantityUnit" : "Kilo"
     },
     {
         "id":"PCWSPI001",
@@ -240,7 +235,7 @@
         "image_url" : "https://firebasestorage.googleapis.com/v0/b/pandurangachatbot.appspot.com/o/Cardamom.png?alt=media&token=e381eabf-ea1e-44ac-83a9-f4b832a44d3b",
         "price" : "250",
         "product_url" : "https://www.pandurangacoffee.com/product-page/cardamom-spices",
-        "quantity" : "quantity-packet-100g",
+        "quantity" : "quantity-packet-100 grams",
         "subtitle" : "Extrabold Cardamom",
         "title" : "Cardamom",
         "options":[
@@ -248,18 +243,19 @@
                 "product_id": "PCWCOF001",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["100g"]
+                "values":["100 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWSPI001",
-                "title" : "100g",
-                "price" : "580"
+                "title" : "100 grams",
+                "price" : "250"
             }
         ],
         "category":"spices",
-        "imageFileName" : "CA"
+        "imageFileName" : "CA",
+        "minimumQuantityUnit" : "Pkt"
     },
     {
         "id":"PCWSPI002",
@@ -272,27 +268,28 @@
         "variation" : {
             "packet-weight" : {
                 "message" : "Please choose your grind quantity",
-                "options" : [ "200g" ]
+                "options" : [ "200 grams" ]
             },
-            "quantity" : "quantity-packet-200g"
+            "quantity" : "quantity-packet-200 grams"
         },
         "options":[
             {
                 "product_id": "PCWSPI002",
                 "name": "Packet Weight",
                 "position": 2,
-                "values":["200g"]
+                "values":["200 grams"]
             }
         ],
         "variations":[
             {
                 "product_id": "PCWSPI002",
-                "title" : "200g",
-                "price" : "580"
+                "title" : "200 grams",
+                "price" : "250"
             }
         ],
         "category":"spices",
-        "imageFileName" : "PE"
+        "imageFileName" : "PE",
+        "minimumQuantityUnit" : "Pkt"
     }
 ]
  

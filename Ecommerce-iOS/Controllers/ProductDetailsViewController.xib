@@ -83,13 +83,23 @@
                     </subviews>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7K-qt-vTz">
+                    <rect key="frame" x="354" y="54" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="B6c-Cu-feX"/>
+                        <constraint firstAttribute="height" constant="40" id="LHQ-61-Zg6"/>
+                    </constraints>
+                    <state key="normal" image="cart_brown_icon"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.22745098039215686" green="0.082352941176470587" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="imy-yd-2df" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="32R-Xd-rVx"/>
                 <constraint firstItem="0Mb-Pt-QnZ" firstAttribute="top" secondItem="CF1-kE-JYk" secondAttribute="bottom" id="7Zx-nV-8Mi"/>
                 <constraint firstItem="imy-yd-2df" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7zQ-RJ-Aaj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f7K-qt-vTz" secondAttribute="trailing" constant="20" id="GiV-mR-r2D"/>
                 <constraint firstItem="imy-yd-2df" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GmB-eb-Lgh"/>
+                <constraint firstItem="f7K-qt-vTz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="PXl-uR-P6X"/>
                 <constraint firstItem="CF1-kE-JYk" firstAttribute="top" secondItem="imy-yd-2df" secondAttribute="bottom" id="dRZ-6z-61g"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Mb-Pt-QnZ" secondAttribute="bottom" constant="10" id="j0f-G3-BGm"/>
                 <constraint firstItem="imy-yd-2df" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="lCX-6U-OaY"/>
@@ -103,6 +113,7 @@
         </view>
     </objects>
     <resources>
+        <image name="cart_brown_icon" width="75" height="75"/>
         <image name="grand_aroma" width="800" height="800"/>
         <image name="plus_button" width="50" height="55"/>
     </resources>

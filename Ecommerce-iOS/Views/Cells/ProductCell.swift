@@ -8,13 +8,16 @@
 
 import UIKit
 
+
+
+
 class ProductCell: UICollectionViewCell {
 
     @IBOutlet weak var imageBackground: UIView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productImage: UIImageView!
-    
+    let optionLauncher = OptionsLauncher()
     var product: Product? {
         didSet {
             updateUI()
@@ -32,4 +35,8 @@ class ProductCell: UICollectionViewCell {
         imageBackground.layer.cornerRadius = 10.0
     }
 
+    @IBAction func addToCartTapped(_ sender: Any) {
+       
+        optionLauncher.showOptionsDrawView(forProduct: product!)
+    }
 }

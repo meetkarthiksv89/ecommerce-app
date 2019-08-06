@@ -29,14 +29,25 @@
                                     <constraint firstAttribute="height" constant="70" id="Kpr-M1-ffc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-Sq-fuw">
-                                <rect key="frame" x="70" y="50.5" width="101.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mOx-Z6-OjQ" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
-                                <rect key="frame" x="476" y="10" width="141" height="101"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-a3-bjD">
+                                <rect key="frame" x="66" y="40" width="110.5" height="41.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-Sq-fuw">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD3-ju-xAT">
+                                        <rect key="frame" x="0.0" y="25" width="110.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mOx-Z6-OjQ" customClass="QuantitySwitcher" customModule="Ecommerce_iOS" customModuleProvider="target">
+                                <rect key="frame" x="496" y="10" width="121" height="101"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uu-xr-uGY">
                                         <rect key="frame" x="0.0" y="37" width="25" height="27"/>
@@ -46,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-Kd-6wS">
-                                        <rect key="frame" x="45" y="30" width="51" height="41"/>
+                                        <rect key="frame" x="35" y="30" width="51" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Kilos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpG-q5-dtc">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="20.5"/>
@@ -63,7 +74,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-yC-yb9">
-                                        <rect key="frame" x="116" y="37" width="25" height="27"/>
+                                        <rect key="frame" x="96" y="37" width="25" height="27"/>
                                         <state key="normal" image="decrement_icon">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -79,14 +90,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.90588235294117647" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lyT-a3-bjD" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="9gI-qz-scy"/>
                             <constraint firstItem="mOx-Z6-OjQ" firstAttribute="top" secondItem="luM-zF-qdr" secondAttribute="top" constant="10" id="Hwg-l0-nrB"/>
-                            <constraint firstItem="ph2-Sq-fuw" firstAttribute="leading" secondItem="BCk-7f-u4V" secondAttribute="trailing" id="JyZ-0s-Th0"/>
                             <constraint firstItem="BCk-7f-u4V" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="L4p-3y-z5T"/>
-                            <constraint firstItem="mOx-Z6-OjQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ph2-Sq-fuw" secondAttribute="trailing" constant="10" id="Qm2-9T-Zgx"/>
                             <constraint firstAttribute="bottom" secondItem="mOx-Z6-OjQ" secondAttribute="bottom" constant="10" id="ZnJ-aX-0F3"/>
                             <constraint firstItem="BCk-7f-u4V" firstAttribute="leading" secondItem="luM-zF-qdr" secondAttribute="leading" id="pPl-41-3od"/>
                             <constraint firstAttribute="trailing" secondItem="mOx-Z6-OjQ" secondAttribute="trailing" constant="10" id="pQt-2K-mjW"/>
-                            <constraint firstItem="ph2-Sq-fuw" firstAttribute="centerY" secondItem="luM-zF-qdr" secondAttribute="centerY" id="qfN-J0-FlL"/>
+                            <constraint firstItem="lyT-a3-bjD" firstAttribute="leading" secondItem="BCk-7f-u4V" secondAttribute="trailing" constant="-4" id="ut1-R9-Tta"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -102,7 +112,9 @@
             <connections>
                 <outlet property="cellView" destination="luM-zF-qdr" id="otv-1S-Deh"/>
                 <outlet property="price" destination="7yY-6q-dbd" id="fIE-Hn-CJr"/>
+                <outlet property="productImageView" destination="BCk-7f-u4V" id="cnm-uN-yXP"/>
                 <outlet property="productTitle" destination="ph2-Sq-fuw" id="6Sz-5D-8aL"/>
+                <outlet property="productVariations" destination="DD3-ju-xAT" id="cXQ-pk-fbb"/>
                 <outlet property="quantity" destination="mpG-q5-dtc" id="8Bj-WH-XgI"/>
             </connections>
             <point key="canvasLocation" x="-302.17391304347831" y="163.72767857142856"/>

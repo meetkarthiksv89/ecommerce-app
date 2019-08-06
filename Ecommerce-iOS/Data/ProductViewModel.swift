@@ -17,6 +17,8 @@ enum CategoryName: String {
 }
 
 class ProductViewModel {
+    
+    static let shared = ProductViewModel()
     var products: [Product]?
     var categoriesWithProduct: [String:[Product]] = [:]
     var totalCategories: Int {
@@ -24,7 +26,7 @@ class ProductViewModel {
     }
     
     var categories: [Category] = []
-    init() {
+    private init() {
         do {
             products = try [Product](fileName: "asdf")
             categorizeProducts()

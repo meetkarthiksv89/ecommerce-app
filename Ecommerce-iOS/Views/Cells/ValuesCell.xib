@@ -25,12 +25,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0X-Pg-rdC">
+                        <rect key="frame" x="15" y="96" width="465" height="1"/>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="D4N-4V-91G"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.95294117649999999" green="0.90588235289999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="w0X-Pg-rdC" secondAttribute="trailing" constant="15" id="Bu5-Hm-f6e"/>
                 <constraint firstItem="WiS-n5-L0J" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Sgc-Ea-no2"/>
                 <constraint firstItem="WiS-n5-L0J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="ev4-i9-HeG"/>
+                <constraint firstItem="w0X-Pg-rdC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="iwd-QU-aK6"/>
+                <constraint firstAttribute="bottom" secondItem="w0X-Pg-rdC" secondAttribute="bottom" id="xLu-Uy-Xq0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="495" height="97"/>

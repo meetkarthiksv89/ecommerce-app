@@ -16,6 +16,14 @@ protocol CartDelegate {
 class CartDrawerView: DrawerView {
     
     var cartDelegate: CartDelegate?
+    let fv = CartFooterView(frame: .zero)
+    var totalPrice: Int = 0 {
+        didSet {
+            fv.productPrice.text = String(self.totalPrice).priceString
+        }
+    }
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +33,7 @@ class CartDrawerView: DrawerView {
         addConstraint(headerView.heightAnchor.constraint(equalToConstant: 50))
         
         
-        let fv = CartFooterView(frame: footerView.frame)
+        
         fv.checkoutButton.addTarget(self, action: #selector(checkoutButtonTapped), for: .touchUpInside)
         footerView.addSubview(fv)
         addConstraint(footerView.heightAnchor.constraint(equalToConstant: 100))
